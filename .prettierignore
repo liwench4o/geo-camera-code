@@ -1,0 +1,22 @@
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+lib/
+coverage/
+artifacts/
+.cache/
+.parcel-cache/
+.vite/
+.turbo/
+.superpowers/
+docs/superpowers/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+*.log
+
+# Preserve published assets, story fixtures, and dependency resolution
+/assets/
+/latex/
+package-lock.json

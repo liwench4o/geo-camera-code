@@ -1,0 +1,843 @@
+{
+  "revision": "visualization-catalog-v6",
+  "defaultVisualization": "hexagon",
+  "datasets": [
+    {
+      "revision": "road-safety-v1",
+      "id": "road-safety",
+      "title": "UK Road Safety (Personal injury road accidents)",
+      "files": [
+        {
+          "revision": "uk-road-safety-v1",
+          "id": "points",
+          "url": "data/uk-road-safety.csv",
+          "format": "csv"
+        }
+      ],
+      "normalizers": ["finiteLonLat", "ukRoadSafetyBounds"],
+      "primaryDataRef": "points",
+      "initialViewState": "ukHexagon"
+    },
+    {
+      "revision": "bike-parking-v1",
+      "id": "bike-parking",
+      "title": "San Francisco Bike Parking",
+      "files": [
+        {
+          "revision": "sf-bike-parking-v1",
+          "id": "points",
+          "url": "data/sf-bike-parking.json",
+          "format": "json"
+        }
+      ],
+      "normalizers": ["bikeParkingCoordinates"],
+      "primaryDataRef": "points",
+      "initialViewState": "sfBikeParking"
+    },
+    {
+      "revision": "commute-v1",
+      "id": "commute",
+      "title": "United Kingdom Commute",
+      "files": [
+        {
+          "revision": "uk-commute-v1",
+          "id": "flows",
+          "url": "data/uk-commute.csv",
+          "format": "csv"
+        }
+      ],
+      "primaryDataRef": "flows"
+    },
+    {
+      "revision": "bart-ridership-v1",
+      "id": "bart-ridership",
+      "title": "BART Ridership Flows",
+      "files": [
+        {
+          "revision": "bart-ridership-202608-v1",
+          "id": "flows",
+          "url": "data/bart-ridership.json",
+          "format": "json"
+        }
+      ],
+      "primaryDataRef": "flows",
+      "initialViewState": "bartRidership"
+    },
+    {
+      "revision": "airports-v1",
+      "id": "airports",
+      "title": "Global Airports",
+      "files": [
+        {
+          "revision": "airports-data-v1",
+          "id": "points",
+          "url": "data/airports.json",
+          "format": "json"
+        }
+      ],
+      "primaryDataRef": "points"
+    },
+    {
+      "revision": "gun-v1",
+      "id": "gun",
+      "title": "US Gun Violence",
+      "files": [
+        {
+          "revision": "gun-incidents-v1",
+          "id": "incidents",
+          "url": "data/gundata.json",
+          "format": "json"
+        }
+      ],
+      "primaryDataRef": "incidents"
+    },
+    {
+      "revision": "cab-trips-v1",
+      "id": "cab-trips",
+      "title": "Cab Trips in Manhattan",
+      "files": [
+        {
+          "revision": "trips-data-v1",
+          "id": "trips",
+          "url": "data/trips-v7.json",
+          "format": "json"
+        },
+        {
+          "revision": "buildings-data-v1",
+          "id": "buildings",
+          "url": "data/buildings.json",
+          "format": "json"
+        }
+      ],
+      "primaryDataRef": "trips"
+    }
+  ],
+  "visualizations": [
+    {
+      "revision": "hexagon-v3",
+      "id": "hexagon",
+      "title": "Hexagon",
+      "datasetId": "road-safety",
+      "datasetParam": "hexagonDataset",
+      "mapStyle": "carto.darkNoLabels",
+      "initialViewState": "ukHexagon",
+      "effects": ["ukHexagonLighting"],
+      "tooltip": "hexagonCount",
+      "layers": [
+        {
+          "id": "hexagon-layer",
+          "type": "HexagonLayer",
+          "dataRef": "points",
+          "rendererVersion": 1,
+          "props": {
+            "coverage": {
+              "param": "hexagonCoverage"
+            },
+            "radius": {
+              "param": "hexagonRadius"
+            },
+            "upperPercentile": {
+              "param": "hexagonUpperPercentile"
+            }
+          },
+          "accessors": {
+            "getPosition": "lonLat",
+            "getColorWeight": "constant1",
+            "getElevationWeight": "constant1"
+          },
+          "selection": {
+            "supported": ["click"],
+            "renderQueryId": "select-hexagon-cell-v1"
+          },
+          "cameraEnvelope": {
+            "producer": "hexagon-cell",
+            "producerVersion": 1,
+            "positionAccessor": "hexagonSelectionPosition",
+            "radius": {
+              "param": "hexagonRadius",
+              "unit": "meters"
+            },
+            "coverage": {
+              "prop": "coverage"
+            },
+            "elevation": {
+              "valueField": "elevationValue",
+              "rangeProp": "elevationRange",
+              "scaleProp": "elevationScale",
+              "domainProp": "elevationDomain"
+            },
+            "support": {
+              "antialiasBufferPx": 2
+            },
+            "capabilities": {
+              "supportsLive": false,
+              "supportsPrediction": false,
+              "maxPredictionHorizonMs": 0,
+              "nominalUpdateHz": 1,
+              "frameEvolution": "revision-step"
+            }
+          },
+          "cameraCalibration": {
+            "version": 1,
+            "referenceZoom": 8,
+            "referenceSafeAreaPx": 921600,
+            "metrics": {
+              "elevation": {
+                "unit": "meters",
+                "lo": 10,
+                "hi": 10000,
+                "source": "global-fallback-v1"
+              },
+              "density": {
+                "unit": "count/km2",
+                "lo": 1,
+                "hi": 1000,
+                "source": "global-fallback-v1"
+              },
+              "aspect": {
+                "unit": "ratio",
+                "lo": 1,
+                "hi": 8,
+                "source": "catalog-v1"
+              }
+            }
+          },
+          "analytics": {
+            "kind": "hexagon",
+            "positionAccessor": "lonLat",
+            "radiusParam": "hexagonRadius",
+            "weightAccessor": "constant1"
+          },
+          "onClick": "hexagonPosition"
+        }
+      ],
+      "parameters": [
+        {
+          "key": "hexagonDataset",
+          "label": "Dataset",
+          "control": "select",
+          "default": "road-safety",
+          "options": [
+            {
+              "label": "UK Road Safety (Personal injury road accidents)",
+              "value": "road-safety"
+            },
+            {
+              "label": "San Francisco Bike Parking",
+              "value": "bike-parking"
+            }
+          ]
+        },
+        {
+          "key": "hexagonCoverage",
+          "label": "Coverage",
+          "control": "slider",
+          "default": 1,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "key": "hexagonRadius",
+          "label": "Radius",
+          "control": "slider",
+          "default": 1000,
+          "min": 500,
+          "max": 10000,
+          "step": 10
+        },
+        {
+          "key": "hexagonUpperPercentile",
+          "label": "Upper %",
+          "control": "slider",
+          "default": 100,
+          "min": 90,
+          "max": 100,
+          "step": 1
+        }
+      ]
+    },
+    {
+      "revision": "mix-v1",
+      "id": "mix",
+      "title": "Heatmap + Scatter",
+      "datasetId": "gun",
+      "mapStyle": "carto.dark",
+      "initialViewState": "usMix",
+      "tooltip": "gunIncident",
+      "layers": [
+        {
+          "id": "scatter",
+          "type": "ScatterplotLayer",
+          "dataRef": "incidents",
+          "rendererVersion": 1,
+          "props": {
+            "getRadius": 1,
+            "radiusUnits": "meters",
+            "radiusScale": 1,
+            "radiusMinPixels": 2,
+            "radiusMaxPixels": 5,
+            "billboard": true
+          },
+          "accessors": {
+            "getPosition": "lonLat",
+            "getFillColor": "gunSeverityColor"
+          },
+          "selection": {
+            "supported": ["click"],
+            "coordinateAccessor": "lonLat",
+            "renderQueryId": "select-scatter-point-v1"
+          },
+          "cameraEnvelope": {
+            "producer": "scatter-point",
+            "producerVersion": 1,
+            "positionAccessor": "lonLat",
+            "radius": {
+              "prop": "getRadius",
+              "unitProp": "radiusUnits",
+              "scaleProp": "radiusScale"
+            },
+            "minPixelsProp": "radiusMinPixels",
+            "maxPixelsProp": "radiusMaxPixels",
+            "support": {
+              "antialiasBufferPx": 2
+            },
+            "capabilities": {
+              "supportsLive": false,
+              "supportsPrediction": false,
+              "maxPredictionHorizonMs": 0,
+              "nominalUpdateHz": 1,
+              "frameEvolution": "revision-step"
+            }
+          },
+          "cameraCalibration": {
+            "version": 1,
+            "referenceZoom": 8,
+            "referenceSafeAreaPx": 921600,
+            "metrics": {
+              "elevation": {
+                "unit": "meters",
+                "lo": 10,
+                "hi": 10000,
+                "source": "global-fallback-v1"
+              },
+              "density": {
+                "unit": "count/km2",
+                "lo": 1,
+                "hi": 1000,
+                "source": "global-fallback-v1"
+              },
+              "aspect": {
+                "unit": "ratio",
+                "lo": 1,
+                "hi": 8,
+                "source": "catalog-v1"
+              }
+            }
+          },
+          "analytics": {
+            "kind": "point",
+            "positionAccessor": "lonLat"
+          },
+          "onClick": "lonLatFields"
+        },
+        {
+          "id": "heat",
+          "type": "HeatmapLayer",
+          "dataRef": "incidents",
+          "rendererVersion": 1,
+          "props": {
+            "radiusPixels": {
+              "param": "heatmapRadius"
+            },
+            "intensity": {
+              "param": "heatmapIntensity"
+            },
+            "threshold": {
+              "param": "heatmapThreshold"
+            }
+          },
+          "accessors": {
+            "getPosition": "lonLat",
+            "getWeight": "gunHeatWeight"
+          },
+          "selection": {
+            "supported": ["map-click", "region"],
+            "coordinateAccessor": "lonLat",
+            "renderQueryId": "select-heatmap-zone-v1"
+          },
+          "cameraEnvelope": {
+            "producer": "heatmap-kernel",
+            "producerVersion": 1,
+            "positionAccessor": "lonLat",
+            "weightAccessor": "gunHeatWeight",
+            "radius": {
+              "prop": "radiusPixels",
+              "unit": "pixels"
+            },
+            "support": {
+              "alphaCutoff": 0.01,
+              "antialiasBufferPx": 2
+            },
+            "capabilities": {
+              "supportsLive": false,
+              "supportsPrediction": false,
+              "maxPredictionHorizonMs": 0,
+              "nominalUpdateHz": 1,
+              "frameEvolution": "revision-step"
+            }
+          },
+          "cameraCalibration": {
+            "version": 1,
+            "referenceZoom": 8,
+            "referenceSafeAreaPx": 921600,
+            "metrics": {
+              "elevation": {
+                "unit": "meters",
+                "lo": 10,
+                "hi": 10000,
+                "source": "global-fallback-v1"
+              },
+              "density": {
+                "unit": "count/km2",
+                "lo": 1,
+                "hi": 1000,
+                "source": "global-fallback-v1"
+              },
+              "aspect": {
+                "unit": "ratio",
+                "lo": 1,
+                "hi": 8,
+                "source": "catalog-v1"
+              }
+            }
+          },
+          "analytics": {
+            "kind": "heatmap",
+            "positionAccessor": "lonLat",
+            "radiusParam": "heatmapRadius",
+            "weightAccessor": "gunHeatWeight"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "key": "heatmapIntensity",
+          "label": "Intensity",
+          "control": "slider",
+          "default": 1,
+          "min": 0,
+          "max": 5,
+          "step": 0.1
+        },
+        {
+          "key": "heatmapThreshold",
+          "label": "Threshold",
+          "control": "slider",
+          "default": 0.03,
+          "min": 0,
+          "max": 1,
+          "step": 0.1
+        },
+        {
+          "key": "heatmapRadius",
+          "label": "Radius",
+          "control": "slider",
+          "default": 30,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        }
+      ]
+    },
+    {
+      "revision": "line-v3",
+      "id": "line",
+      "title": "Flow Lines",
+      "datasetId": "commute",
+      "datasetParam": "lineDataset",
+      "mapStyle": "carto.darkNoLabels",
+      "initialViewState": "ukLine",
+      "tooltip": "lineDetails",
+      "pickingRadius": 5,
+      "layers": [
+        {
+          "id": "line-flight-paths",
+          "type": "LineLayer",
+          "dataRef": "flows",
+          "rendererVersion": 1,
+          "props": {
+            "getWidth": 1,
+            "widthUnits": "pixels",
+            "widthScale": 1
+          },
+          "accessors": {
+            "getSourcePosition": "lineSource",
+            "getTargetPosition": "lineTarget",
+            "getColor": "lineColor",
+            "getWidth": "lineWidth"
+          },
+          "selection": {
+            "supported": ["click", "path"],
+            "renderQueryId": "select-line-path-v1"
+          },
+          "cameraEnvelope": {
+            "producer": "line-path",
+            "producerVersion": 1,
+            "sourcePositionAccessor": "lineSource",
+            "targetPositionAccessor": "lineTarget",
+            "width": {
+              "prop": "getWidth",
+              "unitProp": "widthUnits",
+              "scaleProp": "widthScale"
+            },
+            "minPixelsProp": "widthMinPixels",
+            "maxPixelsProp": "widthMaxPixels",
+            "support": {
+              "antialiasBufferPx": 2
+            },
+            "capabilities": {
+              "supportsLive": false,
+              "supportsPrediction": false,
+              "maxPredictionHorizonMs": 0,
+              "nominalUpdateHz": 1,
+              "frameEvolution": "revision-step"
+            },
+            "widthAccessor": "lineWidth"
+          },
+          "cameraCalibration": {
+            "version": 1,
+            "referenceZoom": 8,
+            "referenceSafeAreaPx": 921600,
+            "metrics": {
+              "elevation": {
+                "unit": "meters",
+                "lo": 10,
+                "hi": 10000,
+                "source": "global-fallback-v1"
+              },
+              "density": {
+                "unit": "count/km2",
+                "lo": 1,
+                "hi": 1000,
+                "source": "global-fallback-v1"
+              },
+              "aspect": {
+                "unit": "ratio",
+                "lo": 1,
+                "hi": 8,
+                "source": "catalog-v1"
+              }
+            }
+          },
+          "analytics": {
+            "kind": "path",
+            "sourcePositionAccessor": "lineSource",
+            "targetPositionAccessor": "lineTarget",
+            "weightAccessor": "constant1"
+          },
+          "onClick": "commutePath"
+        }
+      ],
+      "parameters": [
+        {
+          "key": "lineDataset",
+          "label": "Dataset",
+          "control": "select",
+          "default": "commute",
+          "options": [
+            {
+              "label": "United Kingdom Commute",
+              "value": "commute"
+            },
+            {
+              "label": "BART Ridership Flows",
+              "value": "bart-ridership"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "revision": "point-v2",
+      "id": "point",
+      "title": "Scatterplot",
+      "datasetId": "airports",
+      "mapStyle": "carto.positron",
+      "initialViewState": "worldPoint",
+      "layers": [
+        {
+          "id": "point-map",
+          "type": "ScatterplotLayer",
+          "dataRef": "points",
+          "rendererVersion": 1,
+          "props": {
+            "getRadius": 100,
+            "radiusUnits": "meters",
+            "radiusScale": 1,
+            "radiusMinPixels": 2,
+            "billboard": true
+          },
+          "accessors": {
+            "getPosition": "coordinates"
+          },
+          "selection": {
+            "supported": ["click"],
+            "coordinateAccessor": "coordinates",
+            "renderQueryId": "select-scatter-point-v1"
+          },
+          "onClick": "lonLatFields",
+          "cameraEnvelope": {
+            "producer": "scatter-point",
+            "producerVersion": 1,
+            "positionAccessor": "coordinates",
+            "radius": {
+              "prop": "getRadius",
+              "unitProp": "radiusUnits",
+              "scaleProp": "radiusScale"
+            },
+            "minPixelsProp": "radiusMinPixels",
+            "maxPixelsProp": "radiusMaxPixels",
+            "support": {
+              "antialiasBufferPx": 2
+            },
+            "capabilities": {
+              "supportsLive": false,
+              "supportsPrediction": false,
+              "maxPredictionHorizonMs": 0,
+              "nominalUpdateHz": 1,
+              "frameEvolution": "revision-step"
+            }
+          },
+          "cameraCalibration": {
+            "version": 1,
+            "referenceZoom": 8,
+            "referenceSafeAreaPx": 921600,
+            "metrics": {
+              "elevation": {
+                "unit": "meters",
+                "lo": 10,
+                "hi": 10000,
+                "source": "global-fallback-v1"
+              },
+              "density": {
+                "unit": "count/km2",
+                "lo": 1,
+                "hi": 1000,
+                "source": "global-fallback-v1"
+              },
+              "aspect": {
+                "unit": "ratio",
+                "lo": 1,
+                "hi": 8,
+                "source": "catalog-v1"
+              }
+            }
+          },
+          "analytics": {
+            "kind": "point",
+            "positionAccessor": "coordinates"
+          }
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "revision": "animated-v1",
+      "id": "animated",
+      "title": "Animated Lines",
+      "datasetId": "cab-trips",
+      "mapStyle": "carto.darkNoLabels",
+      "initialViewState": "manhattanAnimated",
+      "effects": ["animatedLighting"],
+      "animation": {
+        "enabledParam": "isAnimated",
+        "speedParam": "animationSpeed",
+        "timeParam": "animationTime",
+        "frameModulo": 1800
+      },
+      "layers": [
+        {
+          "id": "trips",
+          "type": "TripsLayer",
+          "dataRef": "trips",
+          "rendererVersion": 1,
+          "props": {
+            "trailLength": {
+              "param": "trailLength"
+            },
+            "currentTime": {
+              "state": "animationTime"
+            },
+            "getWidth": 1,
+            "widthUnits": "pixels",
+            "widthScale": 1,
+            "widthMinPixels": 2,
+            "billboard": true,
+            "jointRounded": true,
+            "capRounded": true
+          },
+          "accessors": {
+            "getPath": "tripPath",
+            "getTimestamps": "tripTimestamps",
+            "getColor": "tripVendorColor"
+          },
+          "selection": {
+            "supported": ["click", "path"],
+            "pathAccessor": "tripPath",
+            "renderQueryId": "select-trip-path-v1"
+          },
+          "cameraEnvelope": {
+            "producer": "trip-path",
+            "producerVersion": 1,
+            "pathAccessor": "tripPath",
+            "width": {
+              "prop": "getWidth",
+              "unitProp": "widthUnits",
+              "scaleProp": "widthScale"
+            },
+            "minPixelsProp": "widthMinPixels",
+            "maxPixelsProp": "widthMaxPixels",
+            "support": {
+              "antialiasBufferPx": 2
+            },
+            "capabilities": {
+              "supportsLive": false,
+              "supportsPrediction": false,
+              "maxPredictionHorizonMs": 0,
+              "nominalUpdateHz": 1,
+              "frameEvolution": "revision-step"
+            }
+          },
+          "cameraCalibration": {
+            "version": 1,
+            "referenceZoom": 8,
+            "referenceSafeAreaPx": 921600,
+            "metrics": {
+              "elevation": {
+                "unit": "meters",
+                "lo": 10,
+                "hi": 10000,
+                "source": "global-fallback-v1"
+              },
+              "density": {
+                "unit": "count/km2",
+                "lo": 1,
+                "hi": 1000,
+                "source": "global-fallback-v1"
+              },
+              "aspect": {
+                "unit": "ratio",
+                "lo": 1,
+                "hi": 8,
+                "source": "catalog-v1"
+              }
+            }
+          },
+          "analytics": {
+            "kind": "path",
+            "pathAccessor": "tripPath"
+          },
+          "onClick": "tripPath"
+        },
+        {
+          "id": "buildings",
+          "type": "PolygonLayer",
+          "dataRef": "buildings",
+          "rendererVersion": 1,
+          "props": {
+            "elevationScale": 1
+          },
+          "accessors": {
+            "getPolygon": "buildingPolygon",
+            "getElevation": "buildingHeight"
+          },
+          "selection": {
+            "supported": ["region"],
+            "renderQueryId": "select-polygon-region-v1"
+          },
+          "cameraEnvelope": {
+            "producer": "polygon-extrusion",
+            "producerVersion": 1,
+            "polygonAccessor": "buildingPolygon",
+            "elevationAccessor": "buildingHeight",
+            "baseMeters": 0,
+            "elevationScale": 1,
+            "elevationUnit": "meters",
+            "wrapMode": "geometry",
+            "support": {
+              "antialiasBufferPx": 2
+            },
+            "capabilities": {
+              "supportsLive": false,
+              "supportsPrediction": false,
+              "maxPredictionHorizonMs": 0,
+              "nominalUpdateHz": 1,
+              "frameEvolution": "revision-step"
+            }
+          },
+          "cameraCalibration": {
+            "version": 1,
+            "referenceZoom": 8,
+            "referenceSafeAreaPx": 921600,
+            "metrics": {
+              "elevation": {
+                "unit": "meters",
+                "lo": 10,
+                "hi": 10000,
+                "source": "global-fallback-v1"
+              },
+              "density": {
+                "unit": "count/km2",
+                "lo": 1,
+                "hi": 1000,
+                "source": "global-fallback-v1"
+              },
+              "aspect": {
+                "unit": "ratio",
+                "lo": 1,
+                "hi": 8,
+                "source": "catalog-v1"
+              }
+            }
+          },
+          "analytics": {
+            "kind": "building",
+            "polygonAccessor": "buildingPolygon",
+            "elevationAccessor": "buildingHeight"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "key": "isAnimated",
+          "label": "Animated",
+          "control": "switch",
+          "default": true
+        },
+        {
+          "key": "animationSpeed",
+          "label": "Speed",
+          "control": "select",
+          "default": 1,
+          "options": [
+            { "label": "0.25×", "value": 0.25, "description": "Close-up details" },
+            { "label": "0.5×", "value": 0.5, "description": "Slow camera moves" },
+            { "label": "1×", "value": 1, "description": "Standard playback" },
+            { "label": "2×", "value": 2, "description": "Quick exploration" },
+            { "label": "4×", "value": 4, "description": "Flow overview" }
+          ]
+        },
+        {
+          "key": "trailLength",
+          "label": "Trail",
+          "control": "slider",
+          "default": 120,
+          "min": 10,
+          "max": 200,
+          "step": 1
+        }
+      ]
+    }
+  ]
+}

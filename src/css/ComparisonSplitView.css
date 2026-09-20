@@ -1,0 +1,51 @@
+.comparison-split-view {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
+.comparison-split-view-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.comparison-split-pane {
+  position: relative;
+  flex: 1 1 50%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.comparison-split-pane + .comparison-split-pane {
+  border-left: 1px solid rgb(226 232 240);
+}
+
+.comparison-split-pane-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: rgb(30 41 59 / 0.75);
+  color: #fff;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.comparison-split-exit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin: 16px;
+}

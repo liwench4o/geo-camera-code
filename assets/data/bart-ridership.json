@@ -1,0 +1,1262 @@
+[
+  {
+    "id": "EM-OW",
+    "source_code": "EM",
+    "target_code": "OW",
+    "source_name": "Embarcadero",
+    "target_name": "West Oakland",
+    "name": "Embarcadero ↔ West Oakland",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.295151,
+      37.804888
+    ],
+    "average_weekday_trips": 2407.1905,
+    "forward_weekday_trips": 1105.0952,
+    "reverse_weekday_trips": 1302.0952,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "DC-MT",
+    "source_code": "DC",
+    "target_code": "MT",
+    "source_name": "Daly City",
+    "target_name": "Montgomery Street",
+    "name": "Daly City ↔ Montgomery Street",
+    "start": [
+      -122.468908,
+      37.706259
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 2005.8095,
+    "forward_weekday_trips": 1052.0952,
+    "reverse_weekday_trips": 953.7143,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "ED-EM",
+    "source_code": "ED",
+    "target_code": "EM",
+    "source_name": "Dublin / Pleasanton",
+    "target_name": "Embarcadero",
+    "name": "Dublin / Pleasanton ↔ Embarcadero",
+    "start": [
+      -121.899229,
+      37.701646
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 1946.3333,
+    "forward_weekday_trips": 1035.0476,
+    "reverse_weekday_trips": 911.2857,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "PL-SO",
+    "source_code": "PL",
+    "target_code": "SO",
+    "source_name": "Powell Street",
+    "target_name": "San Francisco International Airport",
+    "name": "Powell Street ↔ San Francisco International Airport",
+    "start": [
+      -122.407331,
+      37.784606
+    ],
+    "end": [
+      -122.391954,
+      37.616091
+    ],
+    "average_weekday_trips": 1831.9048,
+    "forward_weekday_trips": 771.6667,
+    "reverse_weekday_trips": 1060.2381,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "BP-PL",
+    "source_code": "BP",
+    "target_code": "PL",
+    "source_name": "Balboa Park",
+    "target_name": "Powell Street",
+    "name": "Balboa Park ↔ Powell Street",
+    "start": [
+      -122.447457,
+      37.721747
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 1817.4286,
+    "forward_weekday_trips": 883.2857,
+    "reverse_weekday_trips": 934.1429,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "24-MT",
+    "source_code": "24",
+    "target_code": "MT",
+    "source_name": "24th Street / Mission",
+    "target_name": "Montgomery Street",
+    "name": "24th Street / Mission ↔ Montgomery Street",
+    "start": [
+      -122.418468,
+      37.752419
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1807.0,
+    "forward_weekday_trips": 962.381,
+    "reverse_weekday_trips": 844.619,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "19-EM",
+    "source_code": "19",
+    "target_code": "EM",
+    "source_name": "19th Street Oakland",
+    "target_name": "Embarcadero",
+    "name": "19th Street Oakland ↔ Embarcadero",
+    "start": [
+      -122.268758,
+      37.808078
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 1777.381,
+    "forward_weekday_trips": 980.381,
+    "reverse_weekday_trips": 797,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-RR",
+    "source_code": "EM",
+    "target_code": "RR",
+    "source_name": "Embarcadero",
+    "target_name": "Rockridge",
+    "name": "Embarcadero ↔ Rockridge",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.251235,
+      37.844755
+    ],
+    "average_weekday_trips": 1709.381,
+    "forward_weekday_trips": 817.0476,
+    "reverse_weekday_trips": 892.3333,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "BK-EM",
+    "source_code": "BK",
+    "target_code": "EM",
+    "source_name": "Downtown Berkeley",
+    "target_name": "Embarcadero",
+    "name": "Downtown Berkeley ↔ Embarcadero",
+    "start": [
+      -122.268109,
+      37.87011
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 1684.8095,
+    "forward_weekday_trips": 919.6667,
+    "reverse_weekday_trips": 765.1429,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "24-EM",
+    "source_code": "24",
+    "target_code": "EM",
+    "source_name": "24th Street / Mission",
+    "target_name": "Embarcadero",
+    "name": "24th Street / Mission ↔ Embarcadero",
+    "start": [
+      -122.418468,
+      37.752419
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 1677.7619,
+    "forward_weekday_trips": 882.5238,
+    "reverse_weekday_trips": 795.2381,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-WC",
+    "source_code": "EM",
+    "target_code": "WC",
+    "source_name": "Embarcadero",
+    "target_name": "Walnut Creek",
+    "name": "Embarcadero ↔ Walnut Creek",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.067327,
+      37.905791
+    ],
+    "average_weekday_trips": 1617.619,
+    "forward_weekday_trips": 752.2381,
+    "reverse_weekday_trips": 865.381,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "12-EM",
+    "source_code": "12",
+    "target_code": "EM",
+    "source_name": "12th Street / Oakland City Center",
+    "target_name": "Embarcadero",
+    "name": "12th Street / Oakland City Center ↔ Embarcadero",
+    "start": [
+      -122.27163,
+      37.803482
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 1606.0,
+    "forward_weekday_trips": 841.0952,
+    "reverse_weekday_trips": 764.9048,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "DC-EM",
+    "source_code": "DC",
+    "target_code": "EM",
+    "source_name": "Daly City",
+    "target_name": "Embarcadero",
+    "name": "Daly City ↔ Embarcadero",
+    "start": [
+      -122.468908,
+      37.706259
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 1474.4762,
+    "forward_weekday_trips": 746.381,
+    "reverse_weekday_trips": 728.0952,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "24-PL",
+    "source_code": "24",
+    "target_code": "PL",
+    "source_name": "24th Street / Mission",
+    "target_name": "Powell Street",
+    "name": "24th Street / Mission ↔ Powell Street",
+    "start": [
+      -122.418468,
+      37.752419
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 1456.0952,
+    "forward_weekday_trips": 667.2857,
+    "reverse_weekday_trips": 788.8095,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "MT-OW",
+    "source_code": "MT",
+    "target_code": "OW",
+    "source_name": "Montgomery Street",
+    "target_name": "West Oakland",
+    "name": "Montgomery Street ↔ West Oakland",
+    "start": [
+      -122.401587,
+      37.789173
+    ],
+    "end": [
+      -122.295151,
+      37.804888
+    ],
+    "average_weekday_trips": 1432.8571,
+    "forward_weekday_trips": 656.9524,
+    "reverse_weekday_trips": 775.9048,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-PH",
+    "source_code": "EM",
+    "target_code": "PH",
+    "source_name": "Embarcadero",
+    "target_name": "Pleasant Hill / Contra Costa Centre",
+    "name": "Embarcadero ↔ Pleasant Hill / Contra Costa Centre",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.055971,
+      37.928434
+    ],
+    "average_weekday_trips": 1427.1905,
+    "forward_weekday_trips": 654.5714,
+    "reverse_weekday_trips": 772.619,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "DC-PL",
+    "source_code": "DC",
+    "target_code": "PL",
+    "source_name": "Daly City",
+    "target_name": "Powell Street",
+    "name": "Daly City ↔ Powell Street",
+    "start": [
+      -122.468908,
+      37.706259
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 1389.6667,
+    "forward_weekday_trips": 649,
+    "reverse_weekday_trips": 740.6667,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-MA",
+    "source_code": "EM",
+    "target_code": "MA",
+    "source_name": "Embarcadero",
+    "target_name": "MacArthur",
+    "name": "Embarcadero ↔ MacArthur",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.267105,
+      37.828803
+    ],
+    "average_weekday_trips": 1367.0476,
+    "forward_weekday_trips": 634.619,
+    "reverse_weekday_trips": 732.4286,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "ED-MT",
+    "source_code": "ED",
+    "target_code": "MT",
+    "source_name": "Dublin / Pleasanton",
+    "target_name": "Montgomery Street",
+    "name": "Dublin / Pleasanton ↔ Montgomery Street",
+    "start": [
+      -121.899229,
+      37.701646
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1329.8571,
+    "forward_weekday_trips": 666.619,
+    "reverse_weekday_trips": 663.2381,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "BP-MT",
+    "source_code": "BP",
+    "target_code": "MT",
+    "source_name": "Balboa Park",
+    "target_name": "Montgomery Street",
+    "name": "Balboa Park ↔ Montgomery Street",
+    "start": [
+      -122.447457,
+      37.721747
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1320.8095,
+    "forward_weekday_trips": 763.381,
+    "reverse_weekday_trips": 557.4286,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-LF",
+    "source_code": "EM",
+    "target_code": "LF",
+    "source_name": "Embarcadero",
+    "target_name": "Lafayette",
+    "name": "Embarcadero ↔ Lafayette",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.12462,
+      37.893183
+    ],
+    "average_weekday_trips": 1261.1905,
+    "forward_weekday_trips": 584.2857,
+    "reverse_weekday_trips": 676.9048,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "GP-MT",
+    "source_code": "GP",
+    "target_code": "MT",
+    "source_name": "Glen Park",
+    "target_name": "Montgomery Street",
+    "name": "Glen Park ↔ Montgomery Street",
+    "start": [
+      -122.433515,
+      37.733235
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1243.2381,
+    "forward_weekday_trips": 656.8571,
+    "reverse_weekday_trips": 586.381,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "19-MT",
+    "source_code": "19",
+    "target_code": "MT",
+    "source_name": "19th Street Oakland",
+    "target_name": "Montgomery Street",
+    "name": "19th Street Oakland ↔ Montgomery Street",
+    "start": [
+      -122.268758,
+      37.808078
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1236.9048,
+    "forward_weekday_trips": 649.8095,
+    "reverse_weekday_trips": 587.0952,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "OW-PL",
+    "source_code": "OW",
+    "target_code": "PL",
+    "source_name": "West Oakland",
+    "target_name": "Powell Street",
+    "name": "West Oakland ↔ Powell Street",
+    "start": [
+      -122.295151,
+      37.804888
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 1188.4762,
+    "forward_weekday_trips": 604.9048,
+    "reverse_weekday_trips": 583.5714,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "CC-DC",
+    "source_code": "CC",
+    "target_code": "DC",
+    "source_name": "Civic Center / UN Plaza",
+    "target_name": "Daly City",
+    "name": "Civic Center / UN Plaza ↔ Daly City",
+    "start": [
+      -122.413826,
+      37.779408
+    ],
+    "end": [
+      -122.468908,
+      37.706259
+    ],
+    "average_weekday_trips": 1176.7619,
+    "forward_weekday_trips": 617.0952,
+    "reverse_weekday_trips": 559.6667,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "MT-RR",
+    "source_code": "MT",
+    "target_code": "RR",
+    "source_name": "Montgomery Street",
+    "target_name": "Rockridge",
+    "name": "Montgomery Street ↔ Rockridge",
+    "start": [
+      -122.401587,
+      37.789173
+    ],
+    "end": [
+      -122.251235,
+      37.844755
+    ],
+    "average_weekday_trips": 1135.2857,
+    "forward_weekday_trips": 559.8571,
+    "reverse_weekday_trips": 575.4286,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "16-MT",
+    "source_code": "16",
+    "target_code": "MT",
+    "source_name": "16th Street / Mission",
+    "target_name": "Montgomery Street",
+    "name": "16th Street / Mission ↔ Montgomery Street",
+    "start": [
+      -122.419704,
+      37.765173
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1125.2381,
+    "forward_weekday_trips": 569.2381,
+    "reverse_weekday_trips": 556,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "BK-MT",
+    "source_code": "BK",
+    "target_code": "MT",
+    "source_name": "Downtown Berkeley",
+    "target_name": "Montgomery Street",
+    "name": "Downtown Berkeley ↔ Montgomery Street",
+    "start": [
+      -122.268109,
+      37.87011
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1116.6667,
+    "forward_weekday_trips": 580.381,
+    "reverse_weekday_trips": 536.2857,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-EN",
+    "source_code": "EM",
+    "target_code": "EN",
+    "source_name": "Embarcadero",
+    "target_name": "El Cerrito Del Norte",
+    "name": "Embarcadero ↔ El Cerrito Del Norte",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.316892,
+      37.925184
+    ],
+    "average_weekday_trips": 1111.7143,
+    "forward_weekday_trips": 516.9524,
+    "reverse_weekday_trips": 594.7619,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "MT-PH",
+    "source_code": "MT",
+    "target_code": "PH",
+    "source_name": "Montgomery Street",
+    "target_name": "Pleasant Hill / Contra Costa Centre",
+    "name": "Montgomery Street ↔ Pleasant Hill / Contra Costa Centre",
+    "start": [
+      -122.401587,
+      37.789173
+    ],
+    "end": [
+      -122.055971,
+      37.928434
+    ],
+    "average_weekday_trips": 1105.0952,
+    "forward_weekday_trips": 549.1429,
+    "reverse_weekday_trips": 555.9524,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "MT-WC",
+    "source_code": "MT",
+    "target_code": "WC",
+    "source_name": "Montgomery Street",
+    "target_name": "Walnut Creek",
+    "name": "Montgomery Street ↔ Walnut Creek",
+    "start": [
+      -122.401587,
+      37.789173
+    ],
+    "end": [
+      -122.067327,
+      37.905791
+    ],
+    "average_weekday_trips": 1093.381,
+    "forward_weekday_trips": 540.0952,
+    "reverse_weekday_trips": 553.2857,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "CC-OW",
+    "source_code": "CC",
+    "target_code": "OW",
+    "source_name": "Civic Center / UN Plaza",
+    "target_name": "West Oakland",
+    "name": "Civic Center / UN Plaza ↔ West Oakland",
+    "start": [
+      -122.413826,
+      37.779408
+    ],
+    "end": [
+      -122.295151,
+      37.804888
+    ],
+    "average_weekday_trips": 1084.7143,
+    "forward_weekday_trips": 540.5714,
+    "reverse_weekday_trips": 544.1429,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "BP-EM",
+    "source_code": "BP",
+    "target_code": "EM",
+    "source_name": "Balboa Park",
+    "target_name": "Embarcadero",
+    "name": "Balboa Park ↔ Embarcadero",
+    "start": [
+      -122.447457,
+      37.721747
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 1081.8571,
+    "forward_weekday_trips": 573.5238,
+    "reverse_weekday_trips": 508.3333,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "16-EM",
+    "source_code": "16",
+    "target_code": "EM",
+    "source_name": "16th Street / Mission",
+    "target_name": "Embarcadero",
+    "name": "16th Street / Mission ↔ Embarcadero",
+    "start": [
+      -122.419704,
+      37.765173
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 1080.381,
+    "forward_weekday_trips": 538.0476,
+    "reverse_weekday_trips": 542.3333,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "12-MT",
+    "source_code": "12",
+    "target_code": "MT",
+    "source_name": "12th Street / Oakland City Center",
+    "target_name": "Montgomery Street",
+    "name": "12th Street / Oakland City Center ↔ Montgomery Street",
+    "start": [
+      -122.27163,
+      37.803482
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1078.2381,
+    "forward_weekday_trips": 560.1429,
+    "reverse_weekday_trips": 518.0952,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-GP",
+    "source_code": "EM",
+    "target_code": "GP",
+    "source_name": "Embarcadero",
+    "target_name": "Glen Park",
+    "name": "Embarcadero ↔ Glen Park",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.433515,
+      37.733235
+    ],
+    "average_weekday_trips": 1077.9048,
+    "forward_weekday_trips": 525.0476,
+    "reverse_weekday_trips": 552.8571,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "16-PL",
+    "source_code": "16",
+    "target_code": "PL",
+    "source_name": "16th Street / Mission",
+    "target_name": "Powell Street",
+    "name": "16th Street / Mission ↔ Powell Street",
+    "start": [
+      -122.419704,
+      37.765173
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 1069.7143,
+    "forward_weekday_trips": 501.1905,
+    "reverse_weekday_trips": 568.5238,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-OR",
+    "source_code": "EM",
+    "target_code": "OR",
+    "source_name": "Embarcadero",
+    "target_name": "Orinda",
+    "name": "Embarcadero ↔ Orinda",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.183667,
+      37.878481
+    ],
+    "average_weekday_trips": 1066.3333,
+    "forward_weekday_trips": 492,
+    "reverse_weekday_trips": 574.3333,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "MB-SO",
+    "source_code": "MB",
+    "target_code": "SO",
+    "source_name": "Millbrae",
+    "target_name": "San Francisco International Airport",
+    "name": "Millbrae ↔ San Francisco International Airport",
+    "start": [
+      -122.386757,
+      37.600237
+    ],
+    "end": [
+      -122.391954,
+      37.616091
+    ],
+    "average_weekday_trips": 1059.8095,
+    "forward_weekday_trips": 512.0952,
+    "reverse_weekday_trips": 547.7143,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "MA-MT",
+    "source_code": "MA",
+    "target_code": "MT",
+    "source_name": "MacArthur",
+    "target_name": "Montgomery Street",
+    "name": "MacArthur ↔ Montgomery Street",
+    "start": [
+      -122.267105,
+      37.828803
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 1053.5714,
+    "forward_weekday_trips": 552.381,
+    "reverse_weekday_trips": 501.1905,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "BP-CC",
+    "source_code": "BP",
+    "target_code": "CC",
+    "source_name": "Balboa Park",
+    "target_name": "Civic Center / UN Plaza",
+    "name": "Balboa Park ↔ Civic Center / UN Plaza",
+    "start": [
+      -122.447457,
+      37.721747
+    ],
+    "end": [
+      -122.413826,
+      37.779408
+    ],
+    "average_weekday_trips": 1024.9524,
+    "forward_weekday_trips": 531.1905,
+    "reverse_weekday_trips": 493.7619,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-FV",
+    "source_code": "EM",
+    "target_code": "FV",
+    "source_name": "Embarcadero",
+    "target_name": "Fruitvale",
+    "name": "Embarcadero ↔ Fruitvale",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.224081,
+      37.774841
+    ],
+    "average_weekday_trips": 1008.9524,
+    "forward_weekday_trips": 466,
+    "reverse_weekday_trips": 542.9524,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "BK-EN",
+    "source_code": "BK",
+    "target_code": "EN",
+    "source_name": "Downtown Berkeley",
+    "target_name": "El Cerrito Del Norte",
+    "name": "Downtown Berkeley ↔ El Cerrito Del Norte",
+    "start": [
+      -122.268109,
+      37.87011
+    ],
+    "end": [
+      -122.316892,
+      37.925184
+    ],
+    "average_weekday_trips": 977.7143,
+    "forward_weekday_trips": 483,
+    "reverse_weekday_trips": 494.7143,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-SL",
+    "source_code": "EM",
+    "target_code": "SL",
+    "source_name": "Embarcadero",
+    "target_name": "San Leandro",
+    "name": "Embarcadero ↔ San Leandro",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.16074,
+      37.721784
+    ],
+    "average_weekday_trips": 965.6667,
+    "forward_weekday_trips": 432.2857,
+    "reverse_weekday_trips": 533.381,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "12-PL",
+    "source_code": "12",
+    "target_code": "PL",
+    "source_name": "12th Street / Oakland City Center",
+    "target_name": "Powell Street",
+    "name": "12th Street / Oakland City Center ↔ Powell Street",
+    "start": [
+      -122.27163,
+      37.803482
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 963.9048,
+    "forward_weekday_trips": 428.5238,
+    "reverse_weekday_trips": 535.381,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "BK-PL",
+    "source_code": "BK",
+    "target_code": "PL",
+    "source_name": "Downtown Berkeley",
+    "target_name": "Powell Street",
+    "name": "Downtown Berkeley ↔ Powell Street",
+    "start": [
+      -122.268109,
+      37.87011
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 951.1905,
+    "forward_weekday_trips": 458.4762,
+    "reverse_weekday_trips": 492.7143,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "19-CC",
+    "source_code": "19",
+    "target_code": "CC",
+    "source_name": "19th Street Oakland",
+    "target_name": "Civic Center / UN Plaza",
+    "name": "19th Street Oakland ↔ Civic Center / UN Plaza",
+    "start": [
+      -122.268758,
+      37.808078
+    ],
+    "end": [
+      -122.413826,
+      37.779408
+    ],
+    "average_weekday_trips": 946.7143,
+    "forward_weekday_trips": 444.0476,
+    "reverse_weekday_trips": 502.6667,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "19-PL",
+    "source_code": "19",
+    "target_code": "PL",
+    "source_name": "19th Street Oakland",
+    "target_name": "Powell Street",
+    "name": "19th Street Oakland ↔ Powell Street",
+    "start": [
+      -122.268758,
+      37.808078
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 910.9524,
+    "forward_weekday_trips": 437.8571,
+    "reverse_weekday_trips": 473.0952,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "GP-PL",
+    "source_code": "GP",
+    "target_code": "PL",
+    "source_name": "Glen Park",
+    "target_name": "Powell Street",
+    "name": "Glen Park ↔ Powell Street",
+    "start": [
+      -122.433515,
+      37.733235
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 898.8571,
+    "forward_weekday_trips": 432.2857,
+    "reverse_weekday_trips": 466.5714,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "EN-PL",
+    "source_code": "EN",
+    "target_code": "PL",
+    "source_name": "El Cerrito Del Norte",
+    "target_name": "Powell Street",
+    "name": "El Cerrito Del Norte ↔ Powell Street",
+    "start": [
+      -122.316892,
+      37.925184
+    ],
+    "end": [
+      -122.407331,
+      37.784606
+    ],
+    "average_weekday_trips": 866.4762,
+    "forward_weekday_trips": 402.1905,
+    "reverse_weekday_trips": 464.2857,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-NB",
+    "source_code": "EM",
+    "target_code": "NB",
+    "source_name": "Embarcadero",
+    "target_name": "North Berkeley",
+    "name": "Embarcadero ↔ North Berkeley",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.283523,
+      37.874005
+    ],
+    "average_weekday_trips": 857.1429,
+    "forward_weekday_trips": 396.5238,
+    "reverse_weekday_trips": 460.619,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "CN-EM",
+    "source_code": "CN",
+    "target_code": "EM",
+    "source_name": "Concord",
+    "target_name": "Embarcadero",
+    "name": "Concord ↔ Embarcadero",
+    "start": [
+      -122.029072,
+      37.973757
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 853.6667,
+    "forward_weekday_trips": 465.2381,
+    "reverse_weekday_trips": 388.4286,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "24-CC",
+    "source_code": "24",
+    "target_code": "CC",
+    "source_name": "24th Street / Mission",
+    "target_name": "Civic Center / UN Plaza",
+    "name": "24th Street / Mission ↔ Civic Center / UN Plaza",
+    "start": [
+      -122.418468,
+      37.752419
+    ],
+    "end": [
+      -122.413826,
+      37.779408
+    ],
+    "average_weekday_trips": 847.0,
+    "forward_weekday_trips": 404.0952,
+    "reverse_weekday_trips": 442.9048,
+    "connection_type": "same-side",
+    "period": "2026-08"
+  },
+  {
+    "id": "LF-MT",
+    "source_code": "LF",
+    "target_code": "MT",
+    "source_name": "Lafayette",
+    "target_name": "Montgomery Street",
+    "name": "Lafayette ↔ Montgomery Street",
+    "start": [
+      -122.12462,
+      37.893183
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 844.2857,
+    "forward_weekday_trips": 421.5238,
+    "reverse_weekday_trips": 422.7619,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "EM-LM",
+    "source_code": "EM",
+    "target_code": "LM",
+    "source_name": "Embarcadero",
+    "target_name": "Lake Merritt",
+    "name": "Embarcadero ↔ Lake Merritt",
+    "start": [
+      -122.397037,
+      37.792762
+    ],
+    "end": [
+      -122.265247,
+      37.797322
+    ],
+    "average_weekday_trips": 843.6667,
+    "forward_weekday_trips": 401.3333,
+    "reverse_weekday_trips": 442.3333,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "12-CC",
+    "source_code": "12",
+    "target_code": "CC",
+    "source_name": "12th Street / Oakland City Center",
+    "target_name": "Civic Center / UN Plaza",
+    "name": "12th Street / Oakland City Center ↔ Civic Center / UN Plaza",
+    "start": [
+      -122.27163,
+      37.803482
+    ],
+    "end": [
+      -122.413826,
+      37.779408
+    ],
+    "average_weekday_trips": 841.1905,
+    "forward_weekday_trips": 360.5714,
+    "reverse_weekday_trips": 480.619,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "EN-MT",
+    "source_code": "EN",
+    "target_code": "MT",
+    "source_name": "El Cerrito Del Norte",
+    "target_name": "Montgomery Street",
+    "name": "El Cerrito Del Norte ↔ Montgomery Street",
+    "start": [
+      -122.316892,
+      37.925184
+    ],
+    "end": [
+      -122.401587,
+      37.789173
+    ],
+    "average_weekday_trips": 828.2381,
+    "forward_weekday_trips": 415.4286,
+    "reverse_weekday_trips": 412.8095,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "CC-MA",
+    "source_code": "CC",
+    "target_code": "MA",
+    "source_name": "Civic Center / UN Plaza",
+    "target_name": "MacArthur",
+    "name": "Civic Center / UN Plaza ↔ MacArthur",
+    "start": [
+      -122.413826,
+      37.779408
+    ],
+    "end": [
+      -122.267105,
+      37.828803
+    ],
+    "average_weekday_trips": 813.9048,
+    "forward_weekday_trips": 429.7619,
+    "reverse_weekday_trips": 384.1429,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "AS-EM",
+    "source_code": "AS",
+    "target_code": "EM",
+    "source_name": "Ashby",
+    "target_name": "Embarcadero",
+    "name": "Ashby ↔ Embarcadero",
+    "start": [
+      -122.269771,
+      37.853072
+    ],
+    "end": [
+      -122.397037,
+      37.792762
+    ],
+    "average_weekday_trips": 805.1905,
+    "forward_weekday_trips": 437.8571,
+    "reverse_weekday_trips": 367.3333,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  },
+  {
+    "id": "MT-SL",
+    "source_code": "MT",
+    "target_code": "SL",
+    "source_name": "Montgomery Street",
+    "target_name": "San Leandro",
+    "name": "Montgomery Street ↔ San Leandro",
+    "start": [
+      -122.401587,
+      37.789173
+    ],
+    "end": [
+      -122.16074,
+      37.721784
+    ],
+    "average_weekday_trips": 792.7619,
+    "forward_weekday_trips": 374.7619,
+    "reverse_weekday_trips": 418,
+    "connection_type": "transbay",
+    "period": "2026-08"
+  }
+]

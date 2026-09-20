@@ -1,0 +1,2579 @@
+{
+  "version": 2,
+  "revision": "camera-library-v2-shot-mode-semantics-2026-09-19",
+  "strictFrame": {
+    "version": 1,
+    "contentMapping": {
+      "occupancy": {
+        "elevation": 0.12,
+        "density": 0.1,
+        "coverage": 0.12,
+        "dispersion": 0.1
+      },
+      "pitch": {
+        "elevationDeg": 18,
+        "curvatureDeg": -8
+      },
+      "bearingOrientationWeight": 0.65,
+      "motion": {
+        "coverage": 0.35,
+        "density": 0.25,
+        "dispersion": 0.35,
+        "curvature": 0.2
+      },
+      "speed": {
+        "curvature": 0.2,
+        "dispersion": 0.1,
+        "minScale": 0.6,
+        "maxScale": 1
+      },
+      "closerWiderOccupancy": [0.78, 0.48]
+    },
+    "solver": {
+      "pitchStepDeg": 5,
+      "bearingStepDeg": 15,
+      "zoomTolerance": 0.01,
+      "meterSupportTolerancePx": 0.25,
+      "meterSupportIntervalBudget": 4096,
+      "numericalBufferPx": 2,
+      "anchorAlignmentMaxIterations": 3,
+      "anchorTolerancePx": 1,
+      "evaluationBudget": 20000,
+      "parameterBoxBudget": 4096,
+      "occupancyRelaxationFactors": [0.9, 0.8, 0.7, 0.6],
+      "anchorCenterBlendFactors": [0.25, 0.5, 0.75, 1]
+    },
+    "fallbackLevels": ["preferred", "occupancy", "pitch", "bearing", "anchor"],
+    "weights": {
+      "occupancy": 4,
+      "pitch": 1,
+      "bearing": 1,
+      "anchor": 2,
+      "continuity": 1
+    }
+  },
+  "tuning": {
+    "global": {
+      "framingTightness": 0,
+      "motionStrength": 0,
+      "anchorHeightRatio": 0.5,
+      "speedScale": 1
+    }
+  },
+  "taxonomy": {
+    "purposes": [
+      {
+        "id": "emphasis",
+        "title": "Emphasizing a Target",
+        "description": "Highlight a selected geospatial target by directing attention to it."
+      },
+      {
+        "id": "overview",
+        "title": "Overviewing Multiple Targets",
+        "description": "Show several targets or the surrounding spatial context as a whole."
+      },
+      {
+        "id": "comparison",
+        "title": "Making a Comparison",
+        "description": "Move between or frame multiple targets to support contrast or analogy."
+      },
+      {
+        "id": "supplement",
+        "title": "Supplementing Information",
+        "description": "Reserve visual space or alter the view to add contextual information."
+      },
+      {
+        "id": "dynamic",
+        "title": "Increasing Dynamics",
+        "description": "Animate the current view without a selected target to add continuity and energy."
+      }
+    ],
+    "targets": [
+      {
+        "id": "location",
+        "title": "Location"
+      },
+      {
+        "id": "region",
+        "title": "Region"
+      },
+      {
+        "id": "path",
+        "title": "Path"
+      },
+      {
+        "id": "multiple",
+        "title": "Multiple Targets"
+      },
+      {
+        "id": "none",
+        "title": "None"
+      }
+    ],
+    "shots": [
+      {
+        "id": "static",
+        "title": "Static"
+      },
+      {
+        "id": "push-in",
+        "title": "Push In"
+      },
+      {
+        "id": "pull-out",
+        "title": "Pull Out"
+      },
+      {
+        "id": "pan",
+        "title": "Pan"
+      },
+      {
+        "id": "tilt",
+        "title": "Tilt"
+      },
+      {
+        "id": "camera-roll",
+        "title": "Camera Roll"
+      },
+      {
+        "id": "arc",
+        "title": "Arc"
+      },
+      {
+        "id": "trucking",
+        "title": "Trucking"
+      },
+      {
+        "id": "tracking",
+        "title": "Tracking"
+      }
+    ]
+  },
+  "defaults": [
+    {
+      "purpose": "emphasis",
+      "targetType": "location",
+      "cameraId": "emphasis-push-in"
+    },
+    {
+      "purpose": "emphasis",
+      "targetType": "region",
+      "cameraId": "emphasis-push-in"
+    },
+    {
+      "purpose": "emphasis",
+      "targetType": "path",
+      "cameraId": "emphasis-tracking"
+    },
+    {
+      "purpose": "emphasis",
+      "targetType": "multiple",
+      "cameraId": "emphasis-static"
+    },
+    {
+      "purpose": "overview",
+      "targetType": "location",
+      "cameraId": "overview-pull-out"
+    },
+    {
+      "purpose": "overview",
+      "targetType": "region",
+      "cameraId": "overview-pull-out"
+    },
+    {
+      "purpose": "overview",
+      "targetType": "path",
+      "cameraId": "overview-tracking"
+    },
+    {
+      "purpose": "overview",
+      "targetType": "multiple",
+      "cameraId": "overview-pan"
+    },
+    {
+      "purpose": "comparison",
+      "targetType": "location",
+      "cameraId": "comparison-pan"
+    },
+    {
+      "purpose": "comparison",
+      "targetType": "region",
+      "cameraId": "comparison-pan"
+    },
+    {
+      "purpose": "comparison",
+      "targetType": "path",
+      "cameraId": "comparison-pan"
+    },
+    {
+      "purpose": "comparison",
+      "targetType": "multiple",
+      "cameraId": "comparison-side-by-side"
+    },
+    {
+      "purpose": "supplement",
+      "targetType": "location",
+      "cameraId": "supplement-pan"
+    },
+    {
+      "purpose": "supplement",
+      "targetType": "region",
+      "cameraId": "supplement-pan"
+    },
+    {
+      "purpose": "supplement",
+      "targetType": "path",
+      "cameraId": "supplement-pan"
+    },
+    {
+      "purpose": "supplement",
+      "targetType": "multiple",
+      "cameraId": "supplement-pan"
+    },
+    {
+      "purpose": "dynamic",
+      "targetType": "none",
+      "cameraId": "dynamic-pull-out"
+    }
+  ],
+  "cameras": [
+    {
+      "id": "emphasis-static",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Static shot",
+      "description": "Hold the selected target in frame for emphasis.",
+      "listDescription": "Hold target in frame",
+      "shots": ["static"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "static",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "short",
+          "label": "Short (2.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000,
+              "stayMs": 0
+            }
+          }
+        },
+        {
+          "id": "medium",
+          "label": "Medium (4.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000,
+              "stayMs": 0
+            }
+          }
+        },
+        {
+          "id": "long",
+          "label": "Long (6.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000,
+              "stayMs": 0
+            }
+          }
+        }
+      ],
+      "optionKind": "duration",
+      "defaultOptionId": "medium"
+    },
+    {
+      "id": "emphasis-push-in",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Push in shot",
+      "description": "Move closer to a location or region to draw attention to details.",
+      "listDescription": "Move closer to target",
+      "shots": ["push-in"],
+      "targetTypes": ["location", "region"],
+      "recipe": {
+        "strategy": "push-in",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (4×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 500
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "emphasis-pull-out",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Pull out shot",
+      "description": "Start from the target and reveal its nearby context.",
+      "listDescription": "Reveal nearby context",
+      "shots": ["pull-out"],
+      "targetTypes": ["location", "region"],
+      "recipe": {
+        "strategy": "pull-out",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "emphasis-pan",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Pan shot",
+      "description": "Move from the current view to a selected target.",
+      "listDescription": "Move to selected target",
+      "shots": ["pan"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "pan",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (4×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 500
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "emphasis-camera-roll",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Camera roll",
+      "description": "Rotate around the selected target to show it from a different orientation.",
+      "listDescription": "Rotate around target",
+      "shots": ["camera-roll"],
+      "targetTypes": ["location", "region"],
+      "recipe": {
+        "strategy": "camera-roll",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 6000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.6×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 10000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "emphasis-arc",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Arc shot",
+      "description": "Orbit around a selected target for a stronger emphasis effect.",
+      "listDescription": "Orbit for emphasis",
+      "shots": ["arc"],
+      "targetTypes": ["location", "region"],
+      "recipe": {
+        "strategy": "arc",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 12000,
+          "stayMs": 2000
+        },
+        "framing": {
+          "bearingDelta": 70
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 12000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.67×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 18000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "emphasis-tilt",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Tilt shot",
+      "description": "Tilt the camera to reveal height or visual salience.",
+      "listDescription": "Reveal height or focus",
+      "shots": ["tilt"],
+      "targetTypes": ["location", "region"],
+      "recipe": {
+        "strategy": "tilt",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "mild",
+          "label": "Mild (end 45°)",
+          "adjustment": {
+            "framing": {
+              "pitchTarget": 45
+            }
+          }
+        },
+        {
+          "id": "moderate",
+          "label": "Moderate (end 55°)",
+          "adjustment": {
+            "framing": {
+              "pitchTarget": 55
+            }
+          }
+        },
+        {
+          "id": "strong",
+          "label": "Strong (end 62°)",
+          "adjustment": {
+            "framing": {
+              "pitchTarget": 62
+            }
+          }
+        }
+      ],
+      "optionKind": "angle",
+      "defaultOptionId": "mild"
+    },
+    {
+      "id": "emphasis-tracking",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Tracking shot",
+      "description": "Follow a selected path to emphasize its shape and progression.",
+      "listDescription": "Follow selected path",
+      "shots": ["tracking"],
+      "targetTypes": ["path"],
+      "recipe": {
+        "strategy": "tracking",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "optionKind": "pace",
+      "defaultOptionId": "normal",
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 5000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 10000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "emphasis-combination-push-in-tilt",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Push in & Tilt shot",
+      "description": "Move closer while tilting to emphasize a central object.",
+      "listDescription": "Close in with tilt",
+      "shots": ["push-in", "tilt"],
+      "targetTypes": ["location", "region"],
+      "recipe": {
+        "strategy": "push-in-tilt",
+        "timing": {
+          "durationMs": 3000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "optionKind": "pace",
+      "defaultOptionId": "normal",
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "emphasis-combination-arc-tilt",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Arc & Tilt shot",
+      "description": "Orbit and tilt around a selected target for a cinematic emphasis.",
+      "listDescription": "Orbit and tilt target",
+      "shots": ["arc", "tilt"],
+      "targetTypes": ["location", "region"],
+      "recipe": {
+        "strategy": "arc-tilt",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 12000,
+          "stayMs": 0
+        },
+        "framing": {
+          "bearingDelta": 70
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "optionKind": "pace",
+      "defaultOptionId": "normal",
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 12000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.67×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 18000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "emphasis-combination-pan-tilt",
+      "mode": "recommended",
+      "purpose": "emphasis",
+      "title": "Pan & Tilt shot",
+      "description": "Pan to a target while changing pitch for emphasis.",
+      "listDescription": "Pan with pitch change",
+      "shots": ["pan", "tilt"],
+      "targetTypes": ["location", "region"],
+      "recipe": {
+        "strategy": "pan-tilt",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "optionKind": "pace",
+      "defaultOptionId": "normal",
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "overview-static",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Static shot",
+      "description": "Hold an overview frame to show the selected spatial context.",
+      "listDescription": "Hold overview frame",
+      "shots": ["static"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "static",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "short",
+          "label": "Short (3.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000,
+              "stayMs": 0
+            }
+          }
+        },
+        {
+          "id": "medium",
+          "label": "Medium (5.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 5000,
+              "stayMs": 0
+            }
+          }
+        },
+        {
+          "id": "long",
+          "label": "Long (8.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000,
+              "stayMs": 0
+            }
+          }
+        }
+      ],
+      "optionKind": "duration",
+      "defaultOptionId": "medium"
+    },
+    {
+      "id": "overview-push-in",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Push in shot",
+      "description": "Move from context toward a group or region.",
+      "listDescription": "Move toward group",
+      "shots": ["push-in"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "push-in",
+        "timing": {
+          "durationMs": 3000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 1500
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "overview-pull-out",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Pull out shot",
+      "description": "Reveal the surrounding context of a target or region.",
+      "listDescription": "Reveal wider context",
+      "shots": ["pull-out"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "pull-out",
+        "timing": {
+          "durationMs": 3000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "overview-pan",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Pan shot",
+      "description": "Move across selected targets to build an overview.",
+      "listDescription": "Scan selected targets",
+      "shots": ["pan"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pan",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2500
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 5000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 10000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "overview-camera-roll",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Camera roll",
+      "description": "Rotate the view to add perspective while preserving overview context.",
+      "listDescription": "Rotate overview",
+      "shots": ["camera-roll"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "camera-roll",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 6000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.6×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 10000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "overview-arc",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Arc shot",
+      "description": "Orbit around the selected context to make an overview more dynamic.",
+      "listDescription": "Orbit overview context",
+      "shots": ["arc"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "arc",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 8000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.67×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 12000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "overview-tilt",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Tilt shot",
+      "description": "Tilt the view to show spatial distribution or height in context.",
+      "listDescription": "Show distribution",
+      "shots": ["tilt"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "tilt",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "mild",
+          "label": "Mild (end 35°)",
+          "adjustment": {
+            "framing": {
+              "pitchTarget": 35
+            }
+          }
+        },
+        {
+          "id": "moderate",
+          "label": "Moderate (end 45°)",
+          "adjustment": {
+            "framing": {
+              "pitchTarget": 45
+            }
+          }
+        },
+        {
+          "id": "strong",
+          "label": "Strong (end 55°)",
+          "adjustment": {
+            "framing": {
+              "pitchTarget": 55
+            }
+          }
+        }
+      ],
+      "optionKind": "angle",
+      "defaultOptionId": "mild"
+    },
+    {
+      "id": "overview-trucking",
+      "hiddenFromLibrary": true,
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Trucking shot",
+      "description": "Move laterally across targets for a broad contextual scan.",
+      "listDescription": "Lateral context scan",
+      "shots": ["trucking"],
+      "targetTypes": ["region", "path", "multiple"],
+      "recipe": {
+        "strategy": "trucking",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2500
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 5000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 10000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "overview-tracking",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Tracking shot",
+      "description": "Follow a path to show its full spatial course.",
+      "listDescription": "Follow full path",
+      "shots": ["tracking"],
+      "targetTypes": ["path"],
+      "recipe": {
+        "strategy": "tracking",
+        "timing": {
+          "durationMs": 6000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "optionKind": "pace",
+      "defaultOptionId": "normal",
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 12000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "overview-combination-push-in-tilt",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Push in & Tilt shot",
+      "description": "Move into an overview while tilting to reveal height or context.",
+      "listDescription": "Enter overview with tilt",
+      "shots": ["push-in", "tilt"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "push-in-tilt",
+        "timing": {
+          "durationMs": 3000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "optionKind": "pace",
+      "defaultOptionId": "normal",
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "overview-combination-arc-tilt",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Arc & Tilt shot",
+      "description": "Orbit and tilt around the selected context.",
+      "listDescription": "Orbit and tilt overview",
+      "shots": ["arc", "tilt"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "arc-tilt",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 8000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "optionKind": "pace",
+      "defaultOptionId": "normal",
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.67×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 12000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "overview-combination-pan-tilt",
+      "mode": "recommended",
+      "purpose": "overview",
+      "title": "Pan & Tilt shot",
+      "description": "Pan through a selected context while changing pitch.",
+      "listDescription": "Pan overview with pitch",
+      "shots": ["pan", "tilt"],
+      "targetTypes": ["region", "multiple"],
+      "recipe": {
+        "strategy": "pan-tilt",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "optionKind": "pace",
+      "defaultOptionId": "normal",
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "comparison-pull-out",
+      "mode": "recommended",
+      "purpose": "comparison",
+      "title": "Pull out shot",
+      "description": "Pull out from one target to frame the compared targets together.",
+      "listDescription": "Frame compared targets",
+      "shots": ["pull-out"],
+      "targetTypes": ["multiple"],
+      "recipe": {
+        "strategy": "pull-out",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 3000
+        },
+        "targetPolicy": {
+          "requiresTarget": true,
+          "requiresComparison": true
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "comparison-push-in",
+      "mode": "recommended",
+      "purpose": "comparison",
+      "title": "Push in shot",
+      "description": "Move into a compared target after framing the comparison context.",
+      "listDescription": "Move into comparison",
+      "shots": ["push-in"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "push-in",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 3000
+        },
+        "targetPolicy": {
+          "requiresTarget": true,
+          "requiresComparison": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 1000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "comparison-pan",
+      "mode": "recommended",
+      "purpose": "comparison",
+      "title": "Pan shot",
+      "description": "Pan between two compared targets.",
+      "listDescription": "Pan between targets",
+      "shots": ["pan"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pan",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 3000
+        },
+        "targetPolicy": {
+          "requiresTarget": true,
+          "requiresComparison": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 1000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "comparison-static",
+      "mode": "recommended",
+      "purpose": "comparison",
+      "title": "Static shot",
+      "description": "Hold a shared comparison frame.",
+      "listDescription": "Hold shared frame",
+      "shots": ["static"],
+      "targetTypes": ["multiple"],
+      "recipe": {
+        "strategy": "static",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true,
+          "requiresComparison": true
+        }
+      },
+      "options": [
+        {
+          "id": "short",
+          "label": "Short (3.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000,
+              "stayMs": 0
+            }
+          }
+        },
+        {
+          "id": "medium",
+          "label": "Medium (5.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 5000,
+              "stayMs": 0
+            }
+          }
+        },
+        {
+          "id": "long",
+          "label": "Long (8.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000,
+              "stayMs": 0
+            }
+          }
+        }
+      ],
+      "optionKind": "duration",
+      "defaultOptionId": "medium"
+    },
+    {
+      "id": "comparison-side-by-side",
+      "mode": "recommended",
+      "purpose": "comparison",
+      "presentation": "split",
+      "title": "Side-by-side split",
+      "description": "Show the two most recent selections in a temporary split screen at equal zoom.",
+      "listDescription": "Split screen at equal zoom",
+      "shots": ["static"],
+      "targetTypes": ["multiple"],
+      "recipe": {
+        "strategy": "static",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true,
+          "requiresComparison": true
+        }
+      },
+      "options": [
+        {
+          "id": "short",
+          "label": "Short (3.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000,
+              "stayMs": 0
+            }
+          }
+        },
+        {
+          "id": "medium",
+          "label": "Medium (5.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 5000,
+              "stayMs": 0
+            }
+          }
+        },
+        {
+          "id": "long",
+          "label": "Long (8.0s)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000,
+              "stayMs": 0
+            }
+          }
+        }
+      ],
+      "optionKind": "duration",
+      "defaultOptionId": "medium"
+    },
+    {
+      "id": "comparison-combination-pan-push-in",
+      "mode": "recommended",
+      "purpose": "comparison",
+      "title": "Pan & Push in shot",
+      "description": "Pan between targets and end by pushing into the comparison target.",
+      "listDescription": "Pan then push in",
+      "shots": ["pan", "push-in"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pan-push-in",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 4000
+        },
+        "targetPolicy": {
+          "requiresTarget": true,
+          "requiresComparison": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 1000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "supplement-pull-out",
+      "mode": "recommended",
+      "purpose": "supplement",
+      "title": "Pull out shot",
+      "description": "Pull out from a target to provide room for supplemental context.",
+      "listDescription": "Make room for context",
+      "shots": ["pull-out"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pull-out",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 1000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "supplement-push-in",
+      "mode": "recommended",
+      "purpose": "supplement",
+      "title": "Push in shot",
+      "description": "Push toward a target while preserving room for annotations.",
+      "listDescription": "Push in with margin",
+      "shots": ["push-in"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "push-in",
+        "timing": {
+          "durationMs": 2500,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 1250
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2500
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 5000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "supplement-pan",
+      "mode": "recommended",
+      "purpose": "supplement",
+      "title": "Pan shot",
+      "description": "Pan to the selected target while offsetting the frame for extra information.",
+      "listDescription": "Offset toward target",
+      "shots": ["pan"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pan",
+        "timing": {
+          "durationMs": 3000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 1500
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "supplement-tilt",
+      "mode": "recommended",
+      "purpose": "supplement",
+      "title": "Tilt shot",
+      "description": "Tilt the view to expose contextual information around the target.",
+      "listDescription": "Expose extra context",
+      "shots": ["tilt"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "tilt",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "supplement-camera-roll",
+      "mode": "recommended",
+      "purpose": "supplement",
+      "title": "Camera roll shot",
+      "description": "Rotate the selected context to make room for supplemental information.",
+      "listDescription": "Rotate to make room",
+      "shots": ["camera-roll"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "camera-roll",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 6000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 3000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 6000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.6×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 10000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "supplement-combination-pull-out-roll",
+      "mode": "recommended",
+      "purpose": "supplement",
+      "title": "Pull out & Camera roll shot",
+      "description": "Pull out while rotating to reveal supplemental context.",
+      "listDescription": "Pull out and rotate",
+      "shots": ["pull-out", "camera-roll"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "pull-out-roll",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 8000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.67×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 12000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "supplement-combination-pan-tilt",
+      "mode": "recommended",
+      "purpose": "supplement",
+      "title": "Pan & Tilt shot",
+      "description": "Pan with a fixed tilt to reserve space for supplemental information.",
+      "listDescription": "Pan with fixed tilt",
+      "shots": ["pan", "tilt"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pan-tilt",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 2000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "supplement-combination-arc-pull-out",
+      "mode": "recommended",
+      "purpose": "supplement",
+      "title": "Arc & Pull out shot",
+      "description": "Orbit while pulling out to show context around the target.",
+      "listDescription": "Orbit while pulling out",
+      "shots": ["arc", "pull-out"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "arc-pull-out",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 10000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      },
+      "options": [
+        {
+          "id": "fast",
+          "label": "Fast (2×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 5000
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 10000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.67×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 15000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "dynamic-push-in",
+      "mode": "recommended",
+      "purpose": "dynamic",
+      "title": "Push in shot",
+      "description": "Slowly move closer to the current view to add motion.",
+      "listDescription": "Slow push from view",
+      "shots": ["push-in"],
+      "targetTypes": ["none"],
+      "recipe": {
+        "strategy": "push-in",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "dynamic-pull-out",
+      "mode": "recommended",
+      "purpose": "dynamic",
+      "title": "Pull out shot",
+      "description": "Slowly pull away from the current view to add motion.",
+      "listDescription": "Slow pull from view",
+      "shots": ["pull-out"],
+      "targetTypes": ["none"],
+      "recipe": {
+        "strategy": "pull-out",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "dynamic-pan",
+      "mode": "recommended",
+      "purpose": "dynamic",
+      "title": "Pan shot",
+      "description": "Subtly pan the current view to add continuity.",
+      "listDescription": "Subtle pan motion",
+      "shots": ["pan"],
+      "targetTypes": ["none"],
+      "recipe": {
+        "strategy": "pan",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "dynamic-camera-roll",
+      "mode": "recommended",
+      "purpose": "dynamic",
+      "title": "Camera roll shot",
+      "description": "Rotate the current view to increase motion.",
+      "listDescription": "Rotate current view",
+      "shots": ["camera-roll"],
+      "targetTypes": ["none"],
+      "recipe": {
+        "strategy": "camera-roll",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "dynamic-arc",
+      "mode": "recommended",
+      "purpose": "dynamic",
+      "title": "Arc shot",
+      "description": "Arc around the current view to add visual energy.",
+      "listDescription": "Arc for visual energy",
+      "shots": ["arc"],
+      "targetTypes": ["none"],
+      "recipe": {
+        "strategy": "arc",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "dynamic-tilt",
+      "mode": "recommended",
+      "purpose": "dynamic",
+      "title": "Tilt shot",
+      "description": "Tilt the current view to add atmosphere.",
+      "listDescription": "Tilt for atmosphere",
+      "shots": ["tilt"],
+      "targetTypes": ["none"],
+      "recipe": {
+        "strategy": "tilt",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      },
+      "options": [
+        {
+          "id": "normal",
+          "label": "Normal (1×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 4000
+            }
+          }
+        },
+        {
+          "id": "slow",
+          "label": "Slow (0.5×)",
+          "adjustment": {
+            "timing": {
+              "durationMs": 8000
+            }
+          }
+        }
+      ],
+      "optionKind": "pace",
+      "defaultOptionId": "normal"
+    },
+    {
+      "id": "basic-push-in",
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Push in shot",
+      "description": "Manual push-in from the current view.",
+      "listDescription": "Manual push-in",
+      "shots": ["push-in"],
+      "targetTypes": ["none", "location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "push-in",
+        "timing": {
+          "durationMs": 3000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      }
+    },
+    {
+      "id": "basic-pull-out",
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Pull out shot",
+      "description": "Manual pull-out from the current view.",
+      "listDescription": "Manual pull-out",
+      "shots": ["pull-out"],
+      "targetTypes": ["none", "location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pull-out",
+        "timing": {
+          "durationMs": 12000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      }
+    },
+    {
+      "id": "basic-pan",
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Pan shot",
+      "description": "Manual pan from the current view.",
+      "listDescription": "Manual pan",
+      "shots": ["pan"],
+      "targetTypes": ["none", "location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pan",
+        "timing": {
+          "durationMs": 2000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      }
+    },
+    {
+      "id": "basic-arc",
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Arc shot",
+      "description": "Manual arc around the current view or selected target.",
+      "listDescription": "Manual arc",
+      "shots": ["arc"],
+      "targetTypes": ["none", "location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "arc",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 12000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      }
+    },
+    {
+      "id": "basic-tilt",
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Tilt shot",
+      "description": "Manual tilt from the current view.",
+      "listDescription": "Manual tilt",
+      "shots": ["tilt"],
+      "targetTypes": ["none", "location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "tilt",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      }
+    },
+    {
+      "id": "basic-roll",
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Camera roll",
+      "description": "Manual camera roll from the current view.",
+      "listDescription": "Manual camera roll",
+      "shots": ["camera-roll"],
+      "targetTypes": ["none", "location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "camera-roll",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 8000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      }
+    },
+    {
+      "id": "basic-trucking",
+      "hiddenFromLibrary": true,
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Trucking shot",
+      "description": "Manual lateral truck movement.",
+      "listDescription": "Manual truck move",
+      "shots": ["trucking"],
+      "targetTypes": ["none", "location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "trucking",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 2000
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      }
+    },
+    {
+      "id": "basic-tracking",
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Tracking shot",
+      "description": "Manual tracking shot for a selected path.",
+      "listDescription": "Manual path tracking",
+      "shots": ["tracking"],
+      "targetTypes": ["path"],
+      "recipe": {
+        "strategy": "tracking",
+        "timing": {
+          "durationMs": 5000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      }
+    },
+    {
+      "id": "basic-static",
+      "mode": "manual",
+      "manualGroup": "basic",
+      "title": "Static shot",
+      "description": "Manual hold on the current view.",
+      "listDescription": "Manual hold",
+      "shots": ["static"],
+      "targetTypes": ["none", "location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "static",
+        "timing": {
+          "durationMs": 0,
+          "stayMs": 3000
+        },
+        "targetPolicy": {
+          "requiresTarget": false
+        }
+      }
+    },
+    {
+      "id": "combination-push-in-tilt",
+      "mode": "manual",
+      "manualGroup": "combination",
+      "title": "Push in & Tilt shot",
+      "description": "Manual push-in with a pitch change.",
+      "listDescription": "Manual push-in tilt",
+      "shots": ["push-in", "tilt"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "push-in-tilt",
+        "timing": {
+          "durationMs": 3000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      }
+    },
+    {
+      "id": "combination-arc-tilt",
+      "mode": "manual",
+      "manualGroup": "combination",
+      "title": "Arc & Tilt shot",
+      "description": "Manual arc with a pitch change.",
+      "listDescription": "Manual arc tilt",
+      "shots": ["arc", "tilt"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "arc-tilt",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 12000,
+          "stayMs": 0
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      }
+    },
+    {
+      "id": "combination-arc-pull-out",
+      "mode": "manual",
+      "manualGroup": "combination",
+      "title": "Arc & Pull out shot",
+      "description": "Manual arc while pulling out to show context.",
+      "listDescription": "Manual arc pull-out",
+      "shots": ["arc", "pull-out"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "arc-pull-out",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 10000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      }
+    },
+    {
+      "id": "combination-pan-tilt",
+      "mode": "manual",
+      "manualGroup": "combination",
+      "title": "Pan & Tilt shot",
+      "description": "Manual pan with a pitch change.",
+      "listDescription": "Manual pan tilt",
+      "shots": ["pan", "tilt"],
+      "targetTypes": ["location", "region", "path", "multiple"],
+      "recipe": {
+        "strategy": "pan-tilt",
+        "timing": {
+          "durationMs": 4000,
+          "stayMs": 1500
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      }
+    },
+    {
+      "id": "combination-pull-out-roll",
+      "mode": "manual",
+      "manualGroup": "combination",
+      "title": "Pull out & Camera roll shot",
+      "description": "Manual pull-out with camera roll.",
+      "listDescription": "Manual pull-out roll",
+      "shots": ["pull-out", "camera-roll"],
+      "targetTypes": ["location", "region", "multiple"],
+      "recipe": {
+        "strategy": "pull-out-roll",
+        "isRotating": true,
+        "timing": {
+          "durationMs": 9000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      }
+    },
+    {
+      "id": "combination-tracking-push-in",
+      "mode": "manual",
+      "manualGroup": "combination",
+      "title": "Tracking & Push in shot",
+      "description": "Manual path tracking that ends by pushing in.",
+      "listDescription": "Track then push in",
+      "shots": ["tracking", "push-in"],
+      "targetTypes": ["path"],
+      "recipe": {
+        "strategy": "tracking-push-in",
+        "timing": {
+          "durationMs": 6000,
+          "stayMs": 1000
+        },
+        "targetPolicy": {
+          "requiresTarget": true
+        }
+      }
+    }
+  ]
+}

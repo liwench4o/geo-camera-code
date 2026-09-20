@@ -1,0 +1,866 @@
+{
+  "type": "geo-camera-story",
+  "version": 2,
+  "cameras": [
+    {
+      "movement": {
+        "id": "study-reclassified-shot-1",
+        "targetId": "study-unselected-shot-1",
+        "targetSnapshot": {
+          "bbox": [
+            -2.005,
+            53.695,
+            -1.995,
+            53.705
+          ],
+          "center": [
+            -2,
+            53.7
+          ],
+          "coordinates": [
+            [
+              -2,
+              53.7
+            ]
+          ],
+          "id": "study-unselected-shot-1",
+          "label": "Current view",
+          "source": "view-fallback",
+          "stats": {
+            "count": 0
+          },
+          "type": "none"
+        },
+        "annotation": {
+          "delay": 0,
+          "duration": 4000,
+          "text": "This dataset is about personal injury road accidents in United Kindom (UK) from 1979. The layer aggregates data within the boundary of each hexagon cell. "
+        },
+        "name": "overview-static",
+        "title": "Static shot",
+        "category": "overview",
+        "initViewState": {
+          "longitude": -2,
+          "latitude": 53.7,
+          "zoom": 5.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -2,
+          "latitude": 53.7,
+          "zoom": 5.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "duration": 4000,
+        "authoring": {
+          "adjustments": {},
+          "manualViews": {
+            "final": {
+              "longitude": -2,
+              "latitude": 53.7,
+              "zoom": 5.3,
+              "pitch": 0,
+              "bearing": 0,
+              "maxPitch": 85
+            },
+            "initial": {
+              "longitude": -2,
+              "latitude": 53.7,
+              "zoom": 5.3,
+              "pitch": 0,
+              "bearing": 0,
+              "maxPitch": 85
+            }
+          },
+          "planningViewport": {
+            "height": 600,
+            "width": 1000
+          },
+          "recipeId": "overview-static",
+          "targetId": "study-unselected-shot-1",
+          "timing": {
+            "duration": 4000,
+            "stay": 0
+          },
+          "version": 2
+        },
+        "stay": 0,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "903879b64edeea02",
+      "trajectory": {
+        "kind": "hold",
+        "sampler": "hold-v1",
+        "samplerVersion": "1",
+        "durationMs": 4000,
+        "keyframes": [
+          {
+            "timeMs": 0,
+            "view": {
+              "longitude": -2,
+              "latitude": 53.7,
+              "zoom": 5.3,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          {
+            "timeMs": 4000,
+            "view": {
+              "longitude": -2,
+              "latitude": 53.7,
+              "zoom": 5.3,
+              "pitch": 0,
+              "bearing": 0
+            }
+          }
+        ]
+      },
+      "trajectoryDigest": "afda546672f7aa0a",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [],
+          "minimumSlackPx": null,
+          "evaluationCount": 0,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "study-reclassified-shot-2",
+        "targetId": "study-location-2",
+        "timelineTargetName": "Birmingham",
+        "targetSnapshot": {
+          "bbox": [
+            -1.895,
+            52.474,
+            -1.885,
+            52.484
+          ],
+          "center": [
+            -1.89,
+            52.479
+          ],
+          "coordinates": [
+            [
+              -1.89,
+              52.479
+            ]
+          ],
+          "id": "study-location-2",
+          "label": "Birmingham",
+          "type": "location",
+          "visualFrame": {
+            "anchor": [
+              -1.89,
+              52.479
+            ],
+            "bbox": [
+              -1.895,
+              52.474,
+              -1.885,
+              52.484
+            ],
+            "extraPaddingPx": 16,
+            "sampleCoordinates": [
+              [
+                -1.89,
+                52.479
+              ]
+            ]
+          }
+        },
+        "annotation": {
+          "delay": 0,
+          "duration": 5000,
+          "text": "For example, in the city of Birmingham, there are 131 accidents in total. "
+        },
+        "name": "emphasis-combination-push-in-tilt",
+        "title": "Push in & Tilt shot",
+        "category": "emphasis",
+        "initViewState": {
+          "longitude": -1.89,
+          "latitude": 52.479,
+          "zoom": 5.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -1.89,
+          "latitude": 52.479,
+          "zoom": 7.419999999999999,
+          "pitch": 60,
+          "bearing": 0
+        },
+        "duration": 4000,
+        "authoring": {
+          "adjustments": {},
+          "manualViews": {
+            "final": {
+              "longitude": -1.89,
+              "latitude": 52.479,
+              "zoom": 7.419999999999999,
+              "pitch": 60,
+              "bearing": 0,
+              "maxPitch": 85
+            },
+            "initial": {
+              "longitude": -1.89,
+              "latitude": 52.479,
+              "zoom": 5.3,
+              "pitch": 0,
+              "bearing": 0,
+              "maxPitch": 85
+            }
+          },
+          "planningViewport": {
+            "height": 600,
+            "width": 1000
+          },
+          "recipeId": "emphasis-combination-push-in-tilt",
+          "targetId": "study-location-2",
+          "timing": {
+            "duration": 4000,
+            "stay": 1000
+          },
+          "version": 2
+        },
+        "stay": 1000,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "4431f043d07389ff",
+      "trajectory": {
+        "kind": "legacy-fly",
+        "sampler": "deck-fly-v1",
+        "samplerVersion": "1",
+        "durationMs": 4000,
+        "viewport": {
+          "width": 1000,
+          "height": 600
+        },
+        "initView": {
+          "longitude": -1.89,
+          "latitude": 52.479,
+          "zoom": 5.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalView": {
+          "longitude": -1.89,
+          "latitude": 52.479,
+          "zoom": 7.419999999999999,
+          "pitch": 60,
+          "bearing": 0
+        }
+      },
+      "trajectoryDigest": "9866df14aabe9fc0",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [],
+          "minimumSlackPx": null,
+          "evaluationCount": 0,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "study-reclassified-shot-3",
+        "targetId": "study-location-3",
+        "timelineTargetName": "London",
+        "targetSnapshot": {
+          "bbox": [
+            -0.122,
+            51.506,
+            -0.112,
+            51.516
+          ],
+          "center": [
+            -0.117,
+            51.511
+          ],
+          "coordinates": [
+            [
+              -0.117,
+              51.511
+            ]
+          ],
+          "id": "study-location-3",
+          "label": "London",
+          "type": "location",
+          "visualFrame": {
+            "anchor": [
+              -0.117,
+              51.511
+            ],
+            "bbox": [
+              -0.122,
+              51.506,
+              -0.112,
+              51.516
+            ],
+            "extraPaddingPx": 16,
+            "sampleCoordinates": [
+              [
+                -0.117,
+                51.511
+              ]
+            ]
+          }
+        },
+        "annotation": {
+          "delay": 0,
+          "duration": 12000,
+          "text": "It is observerd in the visualization that the region around London has the most road accidents, with 650 accidents since 1979. "
+        },
+        "name": "emphasis-combination-arc-tilt",
+        "title": "Arc & Tilt shot",
+        "category": "emphasis",
+        "initViewState": {
+          "longitude": -0.117,
+          "latitude": 51.511,
+          "zoom": 6.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -0.117,
+          "latitude": 51.511,
+          "zoom": 6.3,
+          "pitch": 60,
+          "bearing": 120
+        },
+        "duration": 12000,
+        "authoring": {
+          "adjustments": {},
+          "manualViews": {
+            "final": {
+              "longitude": -0.117,
+              "latitude": 51.511,
+              "zoom": 6.3,
+              "pitch": 60,
+              "bearing": 120,
+              "maxPitch": 85
+            },
+            "initial": {
+              "longitude": -0.117,
+              "latitude": 51.511,
+              "zoom": 6.3,
+              "pitch": 0,
+              "bearing": 0,
+              "maxPitch": 85
+            }
+          },
+          "planningViewport": {
+            "height": 600,
+            "width": 1000
+          },
+          "recipeId": "emphasis-combination-arc-tilt",
+          "targetId": "study-location-3",
+          "timing": {
+            "duration": 12000,
+            "stay": 0
+          },
+          "version": 2
+        },
+        "stay": 0,
+        "isRotating": true,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "ed8536db1a57396f",
+      "trajectory": {
+        "kind": "legacy-fly",
+        "sampler": "deck-fly-v1",
+        "samplerVersion": "1",
+        "durationMs": 12000,
+        "viewport": {
+          "width": 1000,
+          "height": 600
+        },
+        "initView": {
+          "longitude": -0.117,
+          "latitude": 51.511,
+          "zoom": 6.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalView": {
+          "longitude": -0.117,
+          "latitude": 51.511,
+          "zoom": 6.3,
+          "pitch": 60,
+          "bearing": 120
+        }
+      },
+      "trajectoryDigest": "b589cff13ddab245",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [],
+          "minimumSlackPx": null,
+          "evaluationCount": 0,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "study-reclassified-shot-4",
+        "targetId": "study-location-4",
+        "timelineTargetName": "Comparison point · [-1.620, 54.974]",
+        "targetSnapshot": {
+          "bbox": [
+            -1.625,
+            54.969,
+            -1.615,
+            54.979
+          ],
+          "center": [
+            -1.62,
+            54.974
+          ],
+          "coordinates": [
+            [
+              -1.62,
+              54.974
+            ]
+          ],
+          "id": "study-location-4",
+          "label": "Comparison point · [-1.620, 54.974]",
+          "type": "location",
+          "visualFrame": {
+            "anchor": [
+              -1.62,
+              54.974
+            ],
+            "bbox": [
+              -1.625,
+              54.969,
+              -1.615,
+              54.979
+            ],
+            "extraPaddingPx": 16,
+            "sampleCoordinates": [
+              [
+                -1.62,
+                54.974
+              ]
+            ]
+          }
+        },
+        "annotation": {
+          "delay": 0,
+          "duration": 5000,
+          "text": "Compared with the cities like Edinburgh in Scotland, however, the number of road accidents is less than 180. "
+        },
+        "name": "comparison-pan",
+        "title": "Pan shot",
+        "category": "comparison",
+        "initViewState": {
+          "longitude": -2,
+          "latitude": 53.7,
+          "zoom": 5.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -1.5564537606310513,
+          "latitude": 54.88932521087909,
+          "zoom": 7.55586253097003,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "duration": 2000,
+        "authoring": {
+          "adjustments": {},
+          "manualViews": {
+            "final": {
+              "longitude": -1.5564537606310513,
+              "latitude": 54.88932521087909,
+              "zoom": 7.55586253097003,
+              "pitch": 0,
+              "bearing": 0,
+              "minZoom": 4.5,
+              "maxZoom": 12,
+              "minPitch": 0,
+              "maxPitch": 85,
+              "altitude": 1.5
+            },
+            "initial": {
+              "longitude": -2,
+              "latitude": 53.7,
+              "zoom": 5.3,
+              "pitch": 0,
+              "bearing": 0,
+              "minZoom": 4.5,
+              "maxZoom": 12,
+              "maxPitch": 85
+            }
+          },
+          "planningViewport": {
+            "height": 600,
+            "width": 1000
+          },
+          "recipeId": "comparison-pan",
+          "targetId": "study-location-4",
+          "timing": {
+            "duration": 2000,
+            "stay": 3000
+          },
+          "version": 2
+        },
+        "stay": 3000,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "72401cc786b38533",
+      "trajectory": {
+        "kind": "legacy-fly",
+        "sampler": "deck-fly-v1",
+        "samplerVersion": "1",
+        "durationMs": 2000,
+        "viewport": {
+          "width": 1000,
+          "height": 600
+        },
+        "initView": {
+          "longitude": -2,
+          "latitude": 53.7,
+          "zoom": 5.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalView": {
+          "longitude": -1.5564537606310513,
+          "latitude": 54.88932521087909,
+          "zoom": 7.55586253097003,
+          "pitch": 0,
+          "bearing": 0
+        }
+      },
+      "trajectoryDigest": "64d4fb5a7b640e4e",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [],
+          "minimumSlackPx": null,
+          "evaluationCount": 0,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "study-reclassified-shot-5",
+        "targetId": "study-scotland-view-region",
+        "timelineTargetName": "Scotland · view extent",
+        "targetSnapshot": {
+          "bbox": [
+            -9.619164,
+            55.513694,
+            1.367164,
+            59.072181
+          ],
+          "center": [
+            -4.126,
+            57.292938
+          ],
+          "coordinates": [
+            [
+              -9.619164,
+              55.513694
+            ],
+            [
+              1.367164,
+              55.513694
+            ],
+            [
+              1.367164,
+              59.072181
+            ],
+            [
+              -9.619164,
+              59.072181
+            ],
+            [
+              -9.619164,
+              55.513694
+            ]
+          ],
+          "id": "study-scotland-view-region",
+          "label": "Scotland · view extent",
+          "selectionAnchor": [
+            -4.126,
+            57.336
+          ],
+          "source": "view-fallback",
+          "type": "region",
+          "visualFrame": {
+            "anchor": [
+              -4.126,
+              57.336
+            ],
+            "bbox": [
+              -9.619164,
+              55.513694,
+              1.367164,
+              59.072181
+            ],
+            "sampleCoordinates": [
+              [
+                -9.619164,
+                55.513694
+              ],
+              [
+                1.367164,
+                55.513694
+              ],
+              [
+                1.367164,
+                59.072181
+              ],
+              [
+                -9.619164,
+                59.072181
+              ],
+              [
+                -9.619164,
+                55.513694
+              ]
+            ]
+          }
+        },
+        "annotation": {
+          "delay": 0,
+          "duration": 10000,
+          "text": "We can also see that the road accident in Scotland area is very low."
+        },
+        "name": "overview-camera-roll",
+        "title": "Camera roll",
+        "category": "overview",
+        "initViewState": {
+          "longitude": -4.126,
+          "latitude": 57.336,
+          "zoom": 6,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -4.126,
+          "latitude": 57.336,
+          "zoom": 6,
+          "pitch": 0,
+          "bearing": 20
+        },
+        "duration": 10000,
+        "authoring": {
+          "adjustments": {},
+          "manualViews": {
+            "final": {
+              "longitude": -4.126,
+              "latitude": 57.336,
+              "zoom": 6,
+              "pitch": 0,
+              "bearing": 20,
+              "maxPitch": 85
+            },
+            "initial": {
+              "longitude": -4.126,
+              "latitude": 57.336,
+              "zoom": 6,
+              "pitch": 0,
+              "bearing": 0,
+              "maxPitch": 85
+            }
+          },
+          "planningViewport": {
+            "height": 600,
+            "width": 1000
+          },
+          "recipeId": "overview-camera-roll",
+          "targetId": "study-scotland-view-region",
+          "timing": {
+            "duration": 10000,
+            "stay": 0
+          },
+          "version": 2
+        },
+        "stay": 0,
+        "isRotating": true,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "b042194a4bf3099e",
+      "trajectory": {
+        "kind": "legacy-fly",
+        "sampler": "deck-fly-v1",
+        "samplerVersion": "1",
+        "durationMs": 10000,
+        "viewport": {
+          "width": 1000,
+          "height": 600
+        },
+        "initView": {
+          "longitude": -4.126,
+          "latitude": 57.336,
+          "zoom": 6,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalView": {
+          "longitude": -4.126,
+          "latitude": 57.336,
+          "zoom": 6,
+          "pitch": 0,
+          "bearing": 20
+        }
+      },
+      "trajectoryDigest": "27cb9d8cf4c9f228",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [],
+          "minimumSlackPx": null,
+          "evaluationCount": 0,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "study-reclassified-shot-6",
+        "targetId": "study-unselected-shot-6",
+        "targetSnapshot": {
+          "bbox": [
+            -2.005,
+            53.695,
+            -1.995,
+            53.705
+          ],
+          "center": [
+            -2,
+            53.7
+          ],
+          "coordinates": [
+            [
+              -2,
+              53.7
+            ]
+          ],
+          "id": "study-unselected-shot-6",
+          "label": "Current view",
+          "source": "view-fallback",
+          "stats": {
+            "count": 0
+          },
+          "type": "none"
+        },
+        "annotation": {
+          "delay": 0,
+          "duration": 10000,
+          "text": "Overall, the visualization of personal injury road accidents in the UK can reflect the level of degree of urban development to some extent."
+        },
+        "name": "basic-pull-out",
+        "title": "Pull out shot",
+        "category": "undefined",
+        "initViewState": {
+          "longitude": -2,
+          "latitude": 53.7,
+          "zoom": 5.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -2,
+          "latitude": 53.7,
+          "zoom": 4.24,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "duration": 10000,
+        "authoring": {
+          "adjustments": {},
+          "manualViews": {
+            "final": {
+              "longitude": -2,
+              "latitude": 53.7,
+              "zoom": 4.24,
+              "pitch": 0,
+              "bearing": 0,
+              "maxPitch": 85
+            },
+            "initial": {
+              "longitude": -2,
+              "latitude": 53.7,
+              "zoom": 5.3,
+              "pitch": 0,
+              "bearing": 0,
+              "maxPitch": 85
+            }
+          },
+          "planningViewport": {
+            "height": 600,
+            "width": 1000
+          },
+          "recipeId": "basic-pull-out",
+          "targetId": "study-unselected-shot-6",
+          "timing": {
+            "duration": 10000,
+            "stay": 0
+          },
+          "version": 2
+        },
+        "stay": 0,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "ebfa5d6d88e4bf59",
+      "trajectory": {
+        "kind": "legacy-fly",
+        "sampler": "deck-fly-v1",
+        "samplerVersion": "1",
+        "durationMs": 10000,
+        "viewport": {
+          "width": 1000,
+          "height": 600
+        },
+        "initView": {
+          "longitude": -2,
+          "latitude": 53.7,
+          "zoom": 5.3,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalView": {
+          "longitude": -2,
+          "latitude": 53.7,
+          "zoom": 4.24,
+          "pitch": 0,
+          "bearing": 0
+        }
+      },
+      "trajectoryDigest": "3c694eea00c0777e",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [],
+          "minimumSlackPx": null,
+          "evaluationCount": 0,
+          "intervalBoundCount": 0
+        }
+      }
+    }
+  ]
+}

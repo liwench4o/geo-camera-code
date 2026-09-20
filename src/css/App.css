@@ -1,0 +1,27 @@
+.resize-sider-handle,
+.resize-config-handle {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 4px;
+  height: 100%;
+  cursor: col-resize;
+}
+
+.resize-sider-handle {
+  right: 0;
+}
+
+.resize-config-handle {
+  left: 0;
+}
+
+.resize-timeline-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4px;
+  cursor: row-resize;
+}

@@ -1,0 +1,196 @@
+.visualization-option-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.visualization-option-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.visualization-option-test {
+  color: #64748b;
+  font-weight: 400;
+}
+
+.visualization-test-badge {
+  flex-shrink: 0;
+  padding: 0 4px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+#tabs-config > .ant-tabs-nav .ant-tabs-nav-list {
+  width: 100%;
+}
+
+#tabs-config > .ant-tabs-nav .ant-tabs-tab {
+  flex: 1;
+  justify-content: center;
+  padding-inline: 8px;
+}
+
+#tabs-config .ant-collapse-header {
+  padding: 4px 16px;
+}
+
+#tabs-config .ant-collapse-content-box {
+  padding: 8px;
+}
+
+.camera-item-panel .ant-tabs-tab,
+.annotation-item-panel .ant-tabs-tab {
+  padding: 8px 0;
+}
+
+.story-file-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 24px;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.story-file-import,
+.story-file-import > span,
+.story-file-import .ant-upload {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.example-dataset-controls > .ant-space-item:first-child {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+}
+
+.example-dataset-controls > .ant-space-item:last-child {
+  flex-shrink: 0;
+}
+
+.camera-item-panel-selected > .ant-collapse-header {
+  background: rgb(240, 249, 255);
+  box-shadow: inset 3px 0 rgb(2, 132, 199);
+}
+
+.camera-item-select {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.camera-item-select:focus-visible {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: rgb(2, 132, 199);
+  outline-offset: 2px;
+}
+
+.camera-item-selected-label {
+  flex-shrink: 0;
+  color: rgb(3, 105, 161);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.camera-view-control-row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 80px;
+  column-gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.camera-view-control-label {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.camera-view-control-slider.ant-slider {
+  margin: 4px 2px;
+}
+
+.camera-view-control-spacer {
+  min-width: 0;
+}
+
+.camera-view-control-input.ant-input-number {
+  width: 80px;
+  justify-self: end;
+}
+
+.camera-view-control-input .ant-input-number-input {
+  text-align: right;
+}
+
+.visualization-settings-grid {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  column-gap: 8px;
+  row-gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 0 8px 0 0;
+}
+
+.visualization-setting-row {
+  display: contents;
+}
+
+.visualization-setting-label {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+  color: rgb(71, 85, 105);
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.visualization-setting-control {
+  min-width: 0;
+}
+
+.visualization-setting-control-with-action {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.visualization-setting-auto {
+  height: 24px;
+  padding-inline: 2px;
+  font-size: 11px;
+}
+
+.visualization-setting-control .ant-select,
+.visualization-setting-control .ant-input-number {
+  width: 100%;
+}
+
+.visualization-setting-control .ant-switch {
+  justify-self: start;
+  flex: none;
+}
+
+.visualization-setting-control .ant-slider.visualization-parameter-slider {
+  margin: 4px 6px 4px 0;
+}

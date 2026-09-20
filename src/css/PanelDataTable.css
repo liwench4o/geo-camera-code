@@ -1,0 +1,16 @@
+.bottom-data-table {
+  min-height: 250px;
+  width: 100%;
+  overflow: auto;
+}
+
+.data-table {
+  height: 248px;
+}
+
+.data-table-select {
+  width: 25%;
+  position: absolute;
+  top: 16px;
+  z-index: 2;
+}

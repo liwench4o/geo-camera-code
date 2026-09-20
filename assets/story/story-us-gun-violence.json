@@ -1,0 +1,2042 @@
+{
+  "type": "geo-camera-story",
+  "version": 2,
+  "cameras": [
+    {
+      "movement": {
+        "id": "us-gun-violence-1",
+        "purpose": "overview",
+        "shot": "push-in",
+        "targetId": "gun-story-national",
+        "timelineTargetName": "01 · National overview",
+        "targetSnapshot": {
+          "bbox": [
+            -125,
+            24,
+            -66,
+            50
+          ],
+          "center": [
+            -95.5,
+            37
+          ],
+          "coordinates": [
+            [
+              -125,
+              24
+            ],
+            [
+              -66,
+              24
+            ],
+            [
+              -66,
+              50
+            ],
+            [
+              -125,
+              50
+            ],
+            [
+              -125,
+              24
+            ]
+          ],
+          "id": "gun-story-national",
+          "label": "Contiguous United States",
+          "source": "drawn-region",
+          "sourceDatasetId": "gun",
+          "sourceLayerId": "heat",
+          "sourceVisualizationId": "mix",
+          "stats": {
+            "count": 136120
+          },
+          "type": "region",
+          "visualFrame": {
+            "anchor": [
+              -95.5,
+              37
+            ],
+            "bbox": [
+              -125,
+              24,
+              -66,
+              50
+            ],
+            "sampleCoordinates": [
+              [
+                -125,
+                24
+              ],
+              [
+                -66,
+                24
+              ],
+              [
+                -66,
+                50
+              ],
+              [
+                -125,
+                50
+              ],
+              [
+                -125,
+                24
+              ]
+            ]
+          }
+        },
+        "recipeId": "overview-push-in",
+        "startDelay": 0,
+        "annotation": {
+          "delay": 0,
+          "duration": 10000,
+          "text": "This sample maps 136,700 recorded gun-violence incidents across the United States, from January 2013 through March 2018."
+        },
+        "recommendationBaseViewState": {
+          "longitude": -94.92718446601943,
+          "latitude": 36.83403015092267,
+          "zoom": 1.9416386672545283,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "name": "overview-push-in",
+        "title": "Push in shot",
+        "category": "overview",
+        "initViewState": {
+          "longitude": -94.92718446601943,
+          "latitude": 36.83403015092267,
+          "zoom": 1.9416386672545283,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -94.92718446601943,
+          "latitude": 36.83403015092267,
+          "zoom": 2.2916386672545284,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "duration": 10000,
+        "authoring": {
+          "adjustments": {
+            "pitchTarget": 0
+          },
+          "manualViews": {
+            "final": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 2.2916386672545284,
+              "pitch": 0,
+              "bearing": 0
+            },
+            "initial": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 1.9416386672545283,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "motion": {
+            "bearingSweep": 0,
+            "endPitch": 0,
+            "startBearing": 0,
+            "startPitch": 0,
+            "zoomDelta": 0.3500000000000001
+          },
+          "planningViewport": {
+            "height": 364,
+            "width": 613
+          },
+          "recipeId": "overview-push-in",
+          "source": {
+            "kind": "reference-view",
+            "view": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 1.9416386672545283,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "targetId": "gun-story-national",
+          "timing": {
+            "duration": 10000,
+            "startDelay": 0,
+            "stay": 0
+          },
+          "version": 2
+        },
+        "stay": 0,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "d6837fd3b93d6ce7",
+      "trajectory": {
+        "kind": "keyframed",
+        "sampler": "minimum-jerk-v1",
+        "samplerVersion": "1",
+        "durationMs": 10000,
+        "keyframes": [
+          {
+            "timeMs": 0,
+            "view": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 1.9416386672545283,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          {
+            "timeMs": 10000,
+            "view": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 2.2916386672545284,
+              "pitch": 0,
+              "bearing": 0
+            }
+          }
+        ]
+      },
+      "trajectoryDigest": "2e3978d1f74de9cd",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [
+            {
+              "timeMs": 0,
+              "slackPx": 45.95781956711253
+            },
+            {
+              "timeMs": 625,
+              "slackPx": 45.90418270186753
+            },
+            {
+              "timeMs": 1250,
+              "slackPx": 45.5690265575138
+            },
+            {
+              "timeMs": 1875,
+              "slackPx": 44.77190815204322
+            },
+            {
+              "timeMs": 2500,
+              "slackPx": 43.423815674874525
+            },
+            {
+              "timeMs": 3125,
+              "slackPx": 41.51006262847668
+            },
+            {
+              "timeMs": 3750,
+              "slackPx": 39.07802158587244
+            },
+            {
+              "timeMs": 4375,
+              "slackPx": 36.2284040685232
+            },
+            {
+              "timeMs": 5000,
+              "slackPx": 33.107525074000414
+            },
+            {
+              "timeMs": 5625,
+              "slackPx": 29.89759292435513
+            },
+            {
+              "timeMs": 6250,
+              "slackPx": 26.802385616803136
+            },
+            {
+              "timeMs": 6875,
+              "slackPx": 24.026702575395213
+            },
+            {
+              "timeMs": 7500,
+              "slackPx": 21.749642907883086
+            },
+            {
+              "timeMs": 8125,
+              "slackPx": 20.093737974738907
+            },
+            {
+              "timeMs": 8750,
+              "slackPx": 19.093614232869733
+            },
+            {
+              "timeMs": 9375,
+              "slackPx": 18.668326656731793
+            },
+            {
+              "timeMs": 10000,
+              "slackPx": 18.6
+            }
+          ],
+          "minimumSlackPx": 18.6,
+          "evaluationCount": 17,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "us-gun-violence-2",
+        "purpose": "emphasis",
+        "shot": "push-in",
+        "targetId": "gun-story-east",
+        "timelineTargetName": "02 · Eastern concentration",
+        "targetSnapshot": {
+          "bbox": [
+            -91,
+            27,
+            -70,
+            47
+          ],
+          "center": [
+            -80.5,
+            37
+          ],
+          "coordinates": [
+            [
+              -91,
+              27
+            ],
+            [
+              -70,
+              27
+            ],
+            [
+              -70,
+              47
+            ],
+            [
+              -91,
+              47
+            ],
+            [
+              -91,
+              27
+            ]
+          ],
+          "id": "gun-story-east",
+          "label": "Eastern United States",
+          "source": "drawn-region",
+          "sourceDatasetId": "gun",
+          "sourceLayerId": "heat",
+          "sourceVisualizationId": "mix",
+          "stats": {
+            "count": 95287
+          },
+          "type": "region",
+          "visualFrame": {
+            "anchor": [
+              -80.5,
+              37
+            ],
+            "bbox": [
+              -91,
+              27,
+              -70,
+              47
+            ],
+            "sampleCoordinates": [
+              [
+                -91,
+                27
+              ],
+              [
+                -70,
+                27
+              ],
+              [
+                -70,
+                47
+              ],
+              [
+                -91,
+                47
+              ],
+              [
+                -91,
+                27
+              ]
+            ]
+          }
+        },
+        "recipeId": "emphasis-push-in",
+        "startDelay": 0,
+        "annotation": {
+          "delay": 0,
+          "duration": 7000,
+          "text": "Recorded incidents form a denser pattern across much of the eastern United States."
+        },
+        "recommendationBaseViewState": {
+          "longitude": -94.92718446601943,
+          "latitude": 36.83403015092267,
+          "zoom": 2.2916386672545284,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "name": "emphasis-push-in",
+        "title": "Push in shot",
+        "category": "emphasis",
+        "initViewState": {
+          "longitude": -94.92718446601943,
+          "latitude": 36.83403015092267,
+          "zoom": 2.2916386672545284,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -80.29611650485437,
+          "latitude": 36.66455665384816,
+          "zoom": 2.6814003149754697,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "duration": 2000,
+        "authoring": {
+          "adjustments": {
+            "pitchTarget": 0
+          },
+          "manualViews": {
+            "final": {
+              "longitude": -80.29611650485435,
+              "latitude": 36.66455665384816,
+              "zoom": 2.6814003149754697,
+              "pitch": 0,
+              "bearing": 0
+            },
+            "initial": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 2.2916386672545284,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "motion": {
+            "bearingSweep": 0,
+            "endPitch": 0,
+            "startBearing": 0,
+            "startPitch": 0,
+            "zoomDelta": 0.38976164772094135
+          },
+          "planningViewport": {
+            "height": 364,
+            "width": 613
+          },
+          "recipeId": "emphasis-push-in",
+          "source": {
+            "kind": "previous-camera",
+            "view": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 2.2916386672545284,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "targetId": "gun-story-east",
+          "timing": {
+            "duration": 2000,
+            "startDelay": 0,
+            "stay": 5000
+          },
+          "version": 2
+        },
+        "stay": 5000,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "939080cec5785b52",
+      "trajectory": {
+        "kind": "keyframed",
+        "sampler": "minimum-jerk-v1",
+        "samplerVersion": "1",
+        "durationMs": 2000,
+        "keyframes": [
+          {
+            "timeMs": 0,
+            "view": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 2.2916386672545284,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          {
+            "timeMs": 2000,
+            "view": {
+              "longitude": -80.29611650485437,
+              "latitude": 36.66455665384816,
+              "zoom": 2.6814003149754697,
+              "pitch": 0,
+              "bearing": 0
+            }
+          }
+        ]
+      },
+      "trajectoryDigest": "22b44f10f9584bcc",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [
+            {
+              "timeMs": 0,
+              "slackPx": 50.139339344620815
+            },
+            {
+              "timeMs": 125,
+              "slackPx": 50.07884130484454
+            },
+            {
+              "timeMs": 250,
+              "slackPx": 49.70068464958961
+            },
+            {
+              "timeMs": 375,
+              "slackPx": 48.80041467569293
+            },
+            {
+              "timeMs": 500,
+              "slackPx": 47.27506721928264
+            },
+            {
+              "timeMs": 625,
+              "slackPx": 45.10369769821191
+            },
+            {
+              "timeMs": 750,
+              "slackPx": 42.3342949134448
+            },
+            {
+              "timeMs": 875,
+              "slackPx": 39.07545589904591
+            },
+            {
+              "timeMs": 1000,
+              "slackPx": 35.48952410202728
+            },
+            {
+              "timeMs": 1125,
+              "slackPx": 31.78328980689937
+            },
+            {
+              "timeMs": 1250,
+              "slackPx": 28.192651997297865
+            },
+            {
+              "timeMs": 1375,
+              "slackPx": 24.95890542147778
+            },
+            {
+              "timeMs": 1500,
+              "slackPx": 22.296527051899773
+            },
+            {
+              "timeMs": 1625,
+              "slackPx": 20.355096059505684
+            },
+            {
+              "timeMs": 1750,
+              "slackPx": 19.1803772644828
+            },
+            {
+              "timeMs": 1875,
+              "slackPx": 18.68035971734868
+            },
+            {
+              "timeMs": 2000,
+              "slackPx": 18.599999999999696
+            }
+          ],
+          "minimumSlackPx": 18.599999999999696,
+          "evaluationCount": 17,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "us-gun-violence-3",
+        "purpose": "comparison",
+        "shot": "pan",
+        "targetId": "target-multiple-mu9w5kh1-rivyn6",
+        "timelineTargetName": "03 · East–central contrast",
+        "targetSnapshot": {
+          "bbox": [
+            -113,
+            27,
+            -70,
+            48
+          ],
+          "center": [
+            -91.5,
+            37.5
+          ],
+          "children": [
+            {
+              "bbox": [
+                -91,
+                27,
+                -70,
+                47
+              ],
+              "center": [
+                -80.5,
+                37
+              ],
+              "coordinates": [
+                [
+                  -91,
+                  27
+                ],
+                [
+                  -70,
+                  27
+                ],
+                [
+                  -70,
+                  47
+                ],
+                [
+                  -91,
+                  47
+                ],
+                [
+                  -91,
+                  27
+                ]
+              ],
+              "id": "gun-story-east",
+              "label": "Eastern United States",
+              "source": "drawn-region",
+              "sourceDatasetId": "gun",
+              "sourceLayerId": "heat",
+              "sourceVisualizationId": "mix",
+              "stats": {
+                "count": 95287
+              },
+              "type": "region",
+              "visualFrame": {
+                "anchor": [
+                  -80.5,
+                  37
+                ],
+                "bbox": [
+                  -91,
+                  27,
+                  -70,
+                  47
+                ],
+                "sampleCoordinates": [
+                  [
+                    -91,
+                    27
+                  ],
+                  [
+                    -70,
+                    27
+                  ],
+                  [
+                    -70,
+                    47
+                  ],
+                  [
+                    -91,
+                    47
+                  ],
+                  [
+                    -91,
+                    27
+                  ]
+                ]
+              }
+            },
+            {
+              "bbox": [
+                -113,
+                33,
+                -99,
+                48
+              ],
+              "center": [
+                -106,
+                40.5
+              ],
+              "coordinates": [
+                [
+                  -113,
+                  33
+                ],
+                [
+                  -99,
+                  33
+                ],
+                [
+                  -99,
+                  48
+                ],
+                [
+                  -113,
+                  48
+                ],
+                [
+                  -113,
+                  33
+                ]
+              ],
+              "id": "gun-story-central",
+              "label": "Central interior",
+              "source": "drawn-region",
+              "sourceDatasetId": "gun",
+              "sourceLayerId": "heat",
+              "sourceVisualizationId": "mix",
+              "stats": {
+                "count": 4751
+              },
+              "type": "region",
+              "visualFrame": {
+                "anchor": [
+                  -106,
+                  40.5
+                ],
+                "bbox": [
+                  -113,
+                  33,
+                  -99,
+                  48
+                ],
+                "sampleCoordinates": [
+                  [
+                    -113,
+                    33
+                  ],
+                  [
+                    -99,
+                    33
+                  ],
+                  [
+                    -99,
+                    48
+                  ],
+                  [
+                    -113,
+                    48
+                  ],
+                  [
+                    -113,
+                    33
+                  ]
+                ]
+              }
+            }
+          ],
+          "coordinates": [
+            [
+              -80.5,
+              37
+            ],
+            [
+              -106,
+              40.5
+            ]
+          ],
+          "id": "target-multiple-mu9w5kh1-rivyn6",
+          "label": "Multiple targets (2)",
+          "source": "combined-targets",
+          "stats": {
+            "bboxAreaKm2": 8778164.937989967,
+            "bboxAreaRatio": 0,
+            "count": 100038,
+            "densityRatio": 0,
+            "dispersionRatio": 0.2182048285240199,
+            "elevationRatio": 0,
+            "layerKinds": [],
+            "maxElevationMeters": 0,
+            "maxElevationRatio": 0,
+            "maxElevationValue": 0,
+            "radiusMeters": 0,
+            "selectedElevationMeters": 0,
+            "selectedElevationValue": 0,
+            "visualAreaKm2": 8778164.937989967,
+            "visualAreaRatio": 0
+          },
+          "type": "multiple",
+          "visualFrame": {
+            "anchor": [
+              -91.5,
+              37.5
+            ],
+            "bbox": [
+              -113,
+              27,
+              -70,
+              48
+            ],
+            "sampleCoordinates": [
+              [
+                -91,
+                27
+              ],
+              [
+                -70,
+                27
+              ],
+              [
+                -70,
+                47
+              ],
+              [
+                -91,
+                47
+              ],
+              [
+                -91,
+                27
+              ],
+              [
+                -113,
+                33
+              ],
+              [
+                -99,
+                33
+              ],
+              [
+                -99,
+                48
+              ],
+              [
+                -113,
+                48
+              ],
+              [
+                -113,
+                33
+              ]
+            ]
+          }
+        },
+        "recipeId": "comparison-pan",
+        "comparisonTargetSnapshots": [
+          {
+            "bbox": [
+              -91,
+              27,
+              -70,
+              47
+            ],
+            "center": [
+              -80.5,
+              37
+            ],
+            "coordinates": [
+              [
+                -91,
+                27
+              ],
+              [
+                -70,
+                27
+              ],
+              [
+                -70,
+                47
+              ],
+              [
+                -91,
+                47
+              ],
+              [
+                -91,
+                27
+              ]
+            ],
+            "id": "gun-story-east",
+            "label": "Eastern United States",
+            "source": "drawn-region",
+            "sourceDatasetId": "gun",
+            "sourceLayerId": "heat",
+            "sourceVisualizationId": "mix",
+            "stats": {
+              "count": 95287
+            },
+            "type": "region",
+            "visualFrame": {
+              "anchor": [
+                -80.5,
+                37
+              ],
+              "bbox": [
+                -91,
+                27,
+                -70,
+                47
+              ],
+              "sampleCoordinates": [
+                [
+                  -91,
+                  27
+                ],
+                [
+                  -70,
+                  27
+                ],
+                [
+                  -70,
+                  47
+                ],
+                [
+                  -91,
+                  47
+                ],
+                [
+                  -91,
+                  27
+                ]
+              ]
+            }
+          },
+          {
+            "bbox": [
+              -113,
+              33,
+              -99,
+              48
+            ],
+            "center": [
+              -106,
+              40.5
+            ],
+            "coordinates": [
+              [
+                -113,
+                33
+              ],
+              [
+                -99,
+                33
+              ],
+              [
+                -99,
+                48
+              ],
+              [
+                -113,
+                48
+              ],
+              [
+                -113,
+                33
+              ]
+            ],
+            "id": "gun-story-central",
+            "label": "Central interior",
+            "source": "drawn-region",
+            "sourceDatasetId": "gun",
+            "sourceLayerId": "heat",
+            "sourceVisualizationId": "mix",
+            "stats": {
+              "count": 4751
+            },
+            "type": "region",
+            "visualFrame": {
+              "anchor": [
+                -106,
+                40.5
+              ],
+              "bbox": [
+                -113,
+                33,
+                -99,
+                48
+              ],
+              "sampleCoordinates": [
+                [
+                  -113,
+                  33
+                ],
+                [
+                  -99,
+                  33
+                ],
+                [
+                  -99,
+                  48
+                ],
+                [
+                  -113,
+                  48
+                ],
+                [
+                  -113,
+                  33
+                ]
+              ]
+            }
+          }
+        ],
+        "startDelay": 0,
+        "annotation": {
+          "delay": 0,
+          "duration": 4000,
+          "text": "Moving west toward the central interior, recorded incidents appear more dispersed."
+        },
+        "recommendationBaseViewState": {
+          "longitude": -80.29611650485437,
+          "latitude": 36.66455665384816,
+          "zoom": 2.6814003149754697,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "name": "comparison-pan",
+        "title": "Pan shot",
+        "category": "comparison",
+        "initViewState": {
+          "longitude": -80.29611650485437,
+          "latitude": 36.66455665384816,
+          "zoom": 2.6814003149754697,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -105.86407766990295,
+          "latitude": 40.172083226325306,
+          "zoom": 2.6814003149754697,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "duration": 2000,
+        "authoring": {
+          "adjustments": {
+            "pitchTarget": 0
+          },
+          "manualViews": {
+            "final": {
+              "longitude": -105.86407766990291,
+              "latitude": 40.172083226325306,
+              "zoom": 2.6814003149754697,
+              "pitch": 0,
+              "bearing": 0
+            },
+            "initial": {
+              "longitude": -80.29611650485437,
+              "latitude": 36.66455665384816,
+              "zoom": 2.6814003149754697,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "motion": {
+            "bearingSweep": 0,
+            "endPitch": 0,
+            "startBearing": 0,
+            "startPitch": 0,
+            "zoomDelta": 0
+          },
+          "planningViewport": {
+            "height": 364,
+            "width": 613
+          },
+          "recipeId": "comparison-pan",
+          "source": {
+            "kind": "previous-camera",
+            "view": {
+              "longitude": -80.29611650485437,
+              "latitude": 36.66455665384816,
+              "zoom": 2.6814003149754697,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "targetId": "target-multiple-mu9w5kh1-rivyn6",
+          "timing": {
+            "duration": 2000,
+            "startDelay": 0,
+            "stay": 2000
+          },
+          "version": 2
+        },
+        "stay": 2000,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "93825b254e379591",
+      "trajectory": {
+        "kind": "keyframed",
+        "sampler": "minimum-jerk-v1",
+        "samplerVersion": "1",
+        "durationMs": 2000,
+        "keyframes": [
+          {
+            "timeMs": 0,
+            "view": {
+              "longitude": -80.29611650485437,
+              "latitude": 36.66455665384816,
+              "zoom": 2.6814003149754697,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          {
+            "timeMs": 2000,
+            "view": {
+              "longitude": -105.86407766990295,
+              "latitude": 40.172083226325306,
+              "zoom": 2.6814003149754697,
+              "pitch": 0,
+              "bearing": 0
+            }
+          }
+        ]
+      },
+      "trajectoryDigest": "f62155968aa25d5a",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [
+            {
+              "timeMs": 0,
+              "slackPx": 18.599999999999696
+            },
+            {
+              "timeMs": 2000,
+              "slackPx": 45.952398649875185
+            }
+          ],
+          "minimumSlackPx": 18.599999999999696,
+          "evaluationCount": 2,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "us-gun-violence-4",
+        "purpose": "overview",
+        "shot": "camera-roll",
+        "targetId": "gun-story-california",
+        "timelineTargetName": "04 · California",
+        "targetSnapshot": {
+          "bbox": [
+            -124.5,
+            32.4,
+            -114.1,
+            42.1
+          ],
+          "center": [
+            -119.3,
+            37.25
+          ],
+          "coordinates": [
+            [
+              -124.5,
+              32.4
+            ],
+            [
+              -114.1,
+              32.4
+            ],
+            [
+              -114.1,
+              42.1
+            ],
+            [
+              -124.5,
+              42.1
+            ],
+            [
+              -124.5,
+              32.4
+            ]
+          ],
+          "id": "gun-story-california",
+          "label": "California and surrounding context",
+          "source": "drawn-region",
+          "sourceDatasetId": "gun",
+          "sourceLayerId": "heat",
+          "sourceVisualizationId": "mix",
+          "stats": {
+            "count": 11167
+          },
+          "type": "region",
+          "visualFrame": {
+            "anchor": [
+              -119.3,
+              37.25
+            ],
+            "bbox": [
+              -124.5,
+              32.4,
+              -114.1,
+              42.1
+            ],
+            "sampleCoordinates": [
+              [
+                -124.5,
+                32.4
+              ],
+              [
+                -114.1,
+                32.4
+              ],
+              [
+                -114.1,
+                42.1
+              ],
+              [
+                -124.5,
+                42.1
+              ],
+              [
+                -124.5,
+                32.4
+              ]
+            ]
+          }
+        },
+        "recipeId": "overview-camera-roll",
+        "startDelay": 0,
+        "annotation": {
+          "delay": 0,
+          "duration": 10000,
+          "text": "California also contains several visible clusters of recorded incidents."
+        },
+        "recommendationBaseViewState": {
+          "longitude": -119.19902912621359,
+          "latitude": 36.92202677444099,
+          "zoom": 3.4327326419684043,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "name": "overview-camera-roll",
+        "title": "Camera roll",
+        "category": "overview",
+        "initViewState": {
+          "longitude": -119.19902912621359,
+          "latitude": 36.92202677444099,
+          "zoom": 3.4327326419684043,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -119.19902912621359,
+          "latitude": 36.92202677444099,
+          "zoom": 3.4327326419684043,
+          "pitch": 0,
+          "bearing": 20
+        },
+        "duration": 10000,
+        "authoring": {
+          "adjustments": {
+            "pitchTarget": 0
+          },
+          "manualViews": {
+            "final": {
+              "longitude": -119.19902912621359,
+              "latitude": 36.92202677444099,
+              "zoom": 3.4327326419684043,
+              "pitch": 0,
+              "bearing": 20
+            },
+            "initial": {
+              "longitude": -119.19902912621359,
+              "latitude": 36.92202677444099,
+              "zoom": 3.4327326419684043,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "motion": {
+            "bearingSweep": 20,
+            "endPitch": 0,
+            "startBearing": 0,
+            "startPitch": 0,
+            "zoomDelta": 0
+          },
+          "planningViewport": {
+            "height": 364,
+            "width": 613
+          },
+          "recipeId": "overview-camera-roll",
+          "source": {
+            "kind": "reference-view",
+            "view": {
+              "longitude": -119.19902912621359,
+              "latitude": 36.92202677444099,
+              "zoom": 3.4327326419684043,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "targetId": "gun-story-california",
+          "timing": {
+            "duration": 10000,
+            "startDelay": 0,
+            "stay": 0
+          },
+          "version": 2
+        },
+        "stay": 0,
+        "isRotating": true,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "1d103c841c8ac4d0",
+      "trajectory": {
+        "kind": "keyframed",
+        "sampler": "minimum-jerk-v1",
+        "samplerVersion": "1",
+        "durationMs": 10000,
+        "keyframes": [
+          {
+            "timeMs": 0,
+            "view": {
+              "longitude": -119.19902912621359,
+              "latitude": 36.92202677444099,
+              "zoom": 3.4327326419684043,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          {
+            "timeMs": 10000,
+            "view": {
+              "longitude": -119.19902912621359,
+              "latitude": 36.92202677444099,
+              "zoom": 3.4327326419684043,
+              "pitch": 0,
+              "bearing": 20
+            }
+          }
+        ]
+      },
+      "trajectoryDigest": "03dbfe2b5efac21f",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [
+            {
+              "timeMs": 0,
+              "slackPx": 42.44394566275721
+            },
+            {
+              "timeMs": 625,
+              "slackPx": 42.38334100335026
+            },
+            {
+              "timeMs": 1250,
+              "slackPx": 42.00678047907204
+            },
+            {
+              "timeMs": 1875,
+              "slackPx": 41.12586049908678
+            },
+            {
+              "timeMs": 2500,
+              "slackPx": 39.68230551701793
+            },
+            {
+              "timeMs": 3125,
+              "slackPx": 37.730300935761626
+            },
+            {
+              "timeMs": 3750,
+              "slackPx": 35.40836202024693
+            },
+            {
+              "timeMs": 4375,
+              "slackPx": 32.90344729184981
+            },
+            {
+              "timeMs": 5000,
+              "slackPx": 30.412941375292824
+            },
+            {
+              "timeMs": 5625,
+              "slackPx": 28.11117777671364
+            },
+            {
+              "timeMs": 6250,
+              "slackPx": 26.126378540371903
+            },
+            {
+              "timeMs": 6875,
+              "slackPx": 24.531237910187826
+            },
+            {
+              "timeMs": 7500,
+              "slackPx": 23.346388250975238
+            },
+            {
+              "timeMs": 8125,
+              "slackPx": 22.551816685210362
+            },
+            {
+              "timeMs": 8750,
+              "slackPx": 22.09841118781418
+            },
+            {
+              "timeMs": 9375,
+              "slackPx": 21.911534555714994
+            },
+            {
+              "timeMs": 10000,
+              "slackPx": 21.881837576677086
+            }
+          ],
+          "minimumSlackPx": 21.881837576677086,
+          "evaluationCount": 17,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "us-gun-violence-5",
+        "purpose": "emphasis",
+        "shot": "push-in",
+        "targetId": "target-location-mu9w5k2r-2bql5c",
+        "timelineTargetName": "05 · Chicago cluster",
+        "targetSnapshot": {
+          "bbox": [
+            -87.78449999999998,
+            41.8153,
+            -87.63130000000001,
+            41.936
+          ],
+          "center": [
+            -87.7079,
+            41.87565
+          ],
+          "id": "target-location-mu9w5k2r-2bql5c",
+          "label": "Chicago heatmap cluster",
+          "selectionAnchor": [
+            -87.713,
+            41.876
+          ],
+          "source": "heatmap-zone",
+          "sourceDatasetId": "gun",
+          "sourceFeatures": [],
+          "sourceLayerId": "heat",
+          "sourceVisualizationId": "mix",
+          "stats": {
+            "count": 3993
+          },
+          "type": "region"
+        },
+        "recipeId": "emphasis-push-in",
+        "startDelay": 0,
+        "annotation": {
+          "delay": 0,
+          "duration": 5000,
+          "text": "A closer look at Chicago reveals a pronounced concentration of recorded incidents."
+        },
+        "recommendationBaseViewState": {
+          "longitude": -119.19902912621359,
+          "latitude": 36.92202677444099,
+          "zoom": 3.4327326419684043,
+          "pitch": 0,
+          "bearing": 20
+        },
+        "name": "emphasis-push-in",
+        "title": "Push in shot",
+        "category": "emphasis",
+        "initViewState": {
+          "longitude": -119.19902912621359,
+          "latitude": 36.92202677444099,
+          "zoom": 3.4327326419684043,
+          "pitch": 0,
+          "bearing": 20
+        },
+        "finalViewState": {
+          "longitude": -87.70641262135922,
+          "latitude": 41.86966933621662,
+          "zoom": 8,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "duration": 2000,
+        "authoring": {
+          "adjustments": {
+            "pitchTarget": 0
+          },
+          "manualViews": {
+            "final": {
+              "longitude": -87.70641262135922,
+              "latitude": 41.86966933621662,
+              "zoom": 8,
+              "pitch": 0,
+              "bearing": 0
+            },
+            "initial": {
+              "longitude": -119.19902912621359,
+              "latitude": 36.92202677444099,
+              "zoom": 3.4327326419684043,
+              "pitch": 0,
+              "bearing": 20
+            }
+          },
+          "motion": {
+            "bearingSweep": -20,
+            "endPitch": 0,
+            "startBearing": 20,
+            "startPitch": 0,
+            "zoomDelta": 4.567267358031596
+          },
+          "planningViewport": {
+            "height": 364,
+            "width": 613
+          },
+          "recipeId": "emphasis-push-in",
+          "sceneRevision": "shadow-scene:95aef1c263090a26",
+          "snapshotRevision": "acc49b4ef308f322",
+          "source": {
+            "kind": "previous-camera",
+            "view": {
+              "longitude": -119.19902912621359,
+              "latitude": 36.92202677444099,
+              "zoom": 3.4327326419684043,
+              "pitch": 0,
+              "bearing": 20
+            }
+          },
+          "targetId": "target-location-mu9w5k2r-2bql5c",
+          "timing": {
+            "duration": 2000,
+            "startDelay": 0,
+            "stay": 3000
+          },
+          "version": 2
+        },
+        "stay": 3000,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "0c201ed739957d73",
+      "trajectory": {
+        "kind": "keyframed",
+        "sampler": "minimum-jerk-v1",
+        "samplerVersion": "1",
+        "durationMs": 2000,
+        "keyframes": [
+          {
+            "timeMs": 0,
+            "view": {
+              "longitude": -119.19902912621359,
+              "latitude": 36.92202677444099,
+              "zoom": 3.4327326419684043,
+              "pitch": 0,
+              "bearing": 20
+            }
+          },
+          {
+            "timeMs": 2000,
+            "view": {
+              "longitude": -87.70641262135922,
+              "latitude": 41.86966933621662,
+              "zoom": 8,
+              "pitch": 0,
+              "bearing": 0
+            }
+          }
+        ]
+      },
+      "trajectoryDigest": "a671e05f4b4d9413",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [
+            {
+              "timeMs": 0,
+              "slackPx": -183.82359705083164
+            },
+            {
+              "timeMs": 31.25,
+              "slackPx": -183.86099591076075
+            },
+            {
+              "timeMs": 62.5,
+              "slackPx": -184.11581319990435
+            },
+            {
+              "timeMs": 93.75,
+              "slackPx": -184.78695570701203
+            },
+            {
+              "timeMs": 125,
+              "slackPx": -186.0547978874022
+            },
+            {
+              "timeMs": 156.25,
+              "slackPx": -188.08339985850253
+            },
+            {
+              "timeMs": 187.5,
+              "slackPx": -191.02295848149325
+            },
+            {
+              "timeMs": 218.75,
+              "slackPx": -195.01231726121958
+            },
+            {
+              "timeMs": 250,
+              "slackPx": -200.18139454959262
+            },
+            {
+              "timeMs": 281.25,
+              "slackPx": -206.6534169470664
+            },
+            {
+              "timeMs": 312.5,
+              "slackPx": -214.54724260166043
+            },
+            {
+              "timeMs": 343.75,
+              "slackPx": -223.97821271829153
+            },
+            {
+              "timeMs": 375,
+              "slackPx": -235.05939754555996
+            },
+            {
+              "timeMs": 406.25,
+              "slackPx": -247.9027459967131
+            },
+            {
+              "timeMs": 437.5,
+              "slackPx": -262.618904156849
+            },
+            {
+              "timeMs": 468.75,
+              "slackPx": -279.3166387074633
+            },
+            {
+              "timeMs": 500,
+              "slackPx": -298.1015328447045
+            },
+            {
+              "timeMs": 531.25,
+              "slackPx": -319.0738674830825
+            },
+            {
+              "timeMs": 562.5,
+              "slackPx": -342.3255961813809
+            },
+            {
+              "timeMs": 593.75,
+              "slackPx": -367.9363223405478
+            },
+            {
+              "timeMs": 625,
+              "slackPx": -395.968194526959
+            },
+            {
+              "timeMs": 656.25,
+              "slackPx": -426.4596533297008
+            },
+            {
+              "timeMs": 687.5,
+              "slackPx": -459.4179942812224
+            },
+            {
+              "timeMs": 718.75,
+              "slackPx": -494.8107594457573
+            },
+            {
+              "timeMs": 750,
+              "slackPx": -532.5560384741376
+            },
+            {
+              "timeMs": 781.25,
+              "slackPx": -572.5118507375531
+            },
+            {
+              "timeMs": 812.5,
+              "slackPx": -614.4648948289874
+            },
+            {
+              "timeMs": 843.75,
+              "slackPx": -658.1190895072933
+            },
+            {
+              "timeMs": 875,
+              "slackPx": -703.0844874671485
+            },
+            {
+              "timeMs": 906.25,
+              "slackPx": -748.8673128578497
+            },
+            {
+              "timeMs": 937.5,
+              "slackPx": -794.8620434873748
+            },
+            {
+              "timeMs": 968.75,
+              "slackPx": -840.3620677449513
+            },
+            {
+              "timeMs": 1000,
+              "slackPx": -884.5199953719624
+            },
+            {
+              "timeMs": 1031.25,
+              "slackPx": -926.3818357787997
+            },
+            {
+              "timeMs": 1062.5,
+              "slackPx": -964.8968443185814
+            },
+            {
+              "timeMs": 1093.75,
+              "slackPx": -998.9337310595835
+            },
+            {
+              "timeMs": 1125,
+              "slackPx": -1027.3087952414564
+            },
+            {
+              "timeMs": 1156.25,
+              "slackPx": -1048.8228681856865
+            },
+            {
+              "timeMs": 1187.5,
+              "slackPx": -1062.3067191528278
+            },
+            {
+              "timeMs": 1218.75,
+              "slackPx": -1066.673818308325
+            },
+            {
+              "timeMs": 1250,
+              "slackPx": -1060.9784945714648
+            },
+            {
+              "timeMs": 1281.25,
+              "slackPx": -1044.4766417091134
+            },
+            {
+              "timeMs": 1312.5,
+              "slackPx": -1016.6853045369872
+            },
+            {
+              "timeMs": 1343.75,
+              "slackPx": -977.436825927845
+            },
+            {
+              "timeMs": 1375,
+              "slackPx": -926.9228673818467
+            },
+            {
+              "timeMs": 1406.25,
+              "slackPx": -865.7236344837908
+            },
+            {
+              "timeMs": 1437.5,
+              "slackPx": -794.8181198677349
+            },
+            {
+              "timeMs": 1468.75,
+              "slackPx": -715.5721520269104
+            },
+            {
+              "timeMs": 1500,
+              "slackPx": -629.702481454227
+            },
+            {
+              "timeMs": 1531.25,
+              "slackPx": -539.2169529285369
+            },
+            {
+              "timeMs": 1562.5,
+              "slackPx": -446.33284663082645
+            },
+            {
+              "timeMs": 1593.75,
+              "slackPx": -353.3775119356394
+            },
+            {
+              "timeMs": 1625,
+              "slackPx": -262.67722868247654
+            },
+            {
+              "timeMs": 1656.25,
+              "slackPx": -176.44157708154526
+            },
+            {
+              "timeMs": 1687.5,
+              "slackPx": -96.65128252698051
+            },
+            {
+              "timeMs": 1718.75,
+              "slackPx": -24.957398751208324
+            },
+            {
+              "timeMs": 1750,
+              "slackPx": 37.40123151015619
+            },
+            {
+              "timeMs": 1875,
+              "slackPx": 76.02916011573592
+            },
+            {
+              "timeMs": 2000,
+              "slackPx": 81.15211786765721
+            }
+          ],
+          "minimumSlackPx": -1066.673818308325,
+          "evaluationCount": 59,
+          "intervalBoundCount": 0
+        }
+      }
+    },
+    {
+      "movement": {
+        "id": "us-gun-violence-6",
+        "purpose": "dynamic",
+        "shot": "pull-out",
+        "targetId": "target-none-mu9w5kl9-ynhf85",
+        "timelineTargetName": "06 · National conclusion",
+        "targetSnapshot": {
+          "bbox": [
+            -87.711413,
+            41.864669,
+            -87.701413,
+            41.874669
+          ],
+          "center": [
+            -87.706413,
+            41.869669
+          ],
+          "coordinates": [
+            [
+              -87.706413,
+              41.869669
+            ]
+          ],
+          "id": "target-none-mu9w5kl9-ynhf85",
+          "label": "Current view",
+          "source": "view-fallback",
+          "stats": {
+            "count": 0
+          },
+          "type": "none"
+        },
+        "recipeId": "dynamic-pull-out",
+        "startDelay": 0,
+        "annotation": {
+          "delay": 0,
+          "duration": 10000,
+          "text": "Across this sample, 136,700 incidents record 57,178 deaths and 114,535 injuries."
+        },
+        "recommendationBaseViewState": {
+          "longitude": -87.70641262135922,
+          "latitude": 41.86966933621662,
+          "zoom": 8,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "name": "dynamic-pull-out",
+        "title": "Pull out shot",
+        "category": "dynamic",
+        "initViewState": {
+          "longitude": -87.70641262135922,
+          "latitude": 41.86966933621662,
+          "zoom": 8,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "finalViewState": {
+          "longitude": -94.92718446601941,
+          "latitude": 36.83403015092267,
+          "zoom": 2.291638667254528,
+          "pitch": 0,
+          "bearing": 0
+        },
+        "duration": 10000,
+        "authoring": {
+          "adjustments": {
+            "pitchTarget": 0
+          },
+          "manualViews": {
+            "final": {
+              "longitude": -94.92718446601943,
+              "latitude": 36.83403015092267,
+              "zoom": 2.2916386672545284,
+              "pitch": 0,
+              "bearing": 0
+            },
+            "initial": {
+              "longitude": -87.70641262135922,
+              "latitude": 41.86966933621662,
+              "zoom": 8,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "motion": {
+            "bearingSweep": 0,
+            "endPitch": 0,
+            "startBearing": 0,
+            "startPitch": 0,
+            "zoomDelta": -5.708361332745472
+          },
+          "planningViewport": {
+            "height": 364,
+            "width": 613
+          },
+          "recipeId": "dynamic-pull-out",
+          "source": {
+            "kind": "previous-camera",
+            "view": {
+              "longitude": -87.70641262135922,
+              "latitude": 41.86966933621662,
+              "zoom": 8,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          "targetId": "target-none-mu9w5kl9-ynhf85",
+          "timing": {
+            "duration": 10000,
+            "startDelay": 0,
+            "stay": 0
+          },
+          "version": 2
+        },
+        "stay": 0,
+        "isRotating": false,
+        "interpolationType": "none",
+        "interpolationDuration": 0
+      },
+      "inputDigest": "7947dc7711ee954b",
+      "trajectory": {
+        "kind": "keyframed",
+        "sampler": "minimum-jerk-v1",
+        "samplerVersion": "1",
+        "durationMs": 10000,
+        "keyframes": [
+          {
+            "timeMs": 0,
+            "view": {
+              "longitude": -87.70641262135922,
+              "latitude": 41.86966933621662,
+              "zoom": 8,
+              "pitch": 0,
+              "bearing": 0
+            }
+          },
+          {
+            "timeMs": 10000,
+            "view": {
+              "longitude": -94.92718446601941,
+              "latitude": 36.83403015092267,
+              "zoom": 2.291638667254528,
+              "pitch": 0,
+              "bearing": 0
+            }
+          }
+        ]
+      },
+      "trajectoryDigest": "689fd588bc068d3c",
+      "certification": {
+        "status": "legacy-unverified",
+        "observations": {
+          "samples": [
+            {
+              "timeMs": 0,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 625,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 1250,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 1875,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 2500,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 3125,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 3750,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 4375,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 5000,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 5625,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 6250,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 6875,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 7500,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 8125,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 8750,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 9375,
+              "slackPx": 0
+            },
+            {
+              "timeMs": 10000,
+              "slackPx": 0
+            }
+          ],
+          "minimumSlackPx": 0,
+          "evaluationCount": 17,
+          "intervalBoundCount": 0
+        }
+      }
+    }
+  ],
+  "homeViews": {
+    "[\"mix\",\"gun\",\"gun-v1\"]": {
+      "longitude": -94.92718446601943,
+      "latitude": 36.83403015092267,
+      "zoom": 1.9416386672545283,
+      "pitch": 0,
+      "bearing": 0
+    }
+  }
+}
